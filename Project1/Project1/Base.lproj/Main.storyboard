@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -26,7 +26,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Pl2-Qg-sbC">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecipeCollectionViewCell" id="Pl2-Qg-sbC" customClass="RecipeCollectionViewCell" customModule="Project1" customModuleProvider="target">
                                         <rect key="frame" x="39" y="64" width="522.5" height="156"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -45,8 +45,15 @@
                                             <constraint firstAttribute="bottom" secondItem="0Kz-5N-7wu" secondAttribute="bottom" id="TXV-Sl-Mzr"/>
                                             <constraint firstItem="0Kz-5N-7wu" firstAttribute="top" secondItem="Pl2-Qg-sbC" secondAttribute="top" id="vPr-Ci-4fa"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="0Kz-5N-7wu" id="0oT-Is-KAE"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kK9-hw-qPe"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Xv0-i9-RJu"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -58,6 +65,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1VP-UR-auw"/>
+                    <connections>
+                        <outlet property="collectionView" destination="u6T-24-p9a" id="2mn-th-mMk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
