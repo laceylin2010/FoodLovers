@@ -24,12 +24,11 @@ class RecipeCollectionViewCell: UICollectionViewCell, Identity
         return "RecipeCollectionViewCell"
     }
     
-    
     func imageAppear()
     {
-        if let matches = matches {
+        if let matches =  matches{
             API.shared.getImage(matches.recipeImage, completion: { (image) -> () in
-                self.imageView.image
+                self.imageView.image = image
                 
             })
             

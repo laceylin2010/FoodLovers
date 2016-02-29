@@ -12,7 +12,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var imageView: UIImageView!
+    
+    var matches: Matches?
 
     var dataSource = [Matches]() {
         didSet {
@@ -29,20 +30,28 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        Matches.updateRecipes(nil) { (success, recipes) -> () in
-            print("yay!")
-        }
-        
-    }
-    
-    
+        loadRecipeImages()
 
+    }
+
+    
     override func didReceiveMemoryWarning()
     {
     
         super.didReceiveMemoryWarning()
 
+    }
+    
+    func loadRecipeImages()
+    {
+        
+        Matches.updateRecipes(nil) { (success, recipeMatches) -> () in
+            print("yay!")
+                self.dataSource = recipeMatches
+        }
+
+        matches?.recipeImage
+    
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
@@ -57,6 +66,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
+        print("Collection View Count: \(dataSource.count)")
         return self.dataSource.count
         
     }

@@ -25,9 +25,8 @@ extension Attributions
             
             attributions.append(allAttributions)
             
-            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
- 
-            })
+            NSOperationQueue.mainQueue().addOperationWithBlock{ completion(success: true, attributions: attributions)
+            }
             
         }
 
@@ -37,31 +36,44 @@ extension Attributions
 
 extension Matches
 {
- 
+    
     class func updateRecipes(searchTerm: String?, completion: (success: Bool, recipeMatches: [Matches]) -> ())
     {
         API.shared.getRecipes(searchTerm) { (success, json) -> () in
             var matches = [Matches]()
             let eachRecipe = json
             
+            print(eachRecipe)
             
-            guard let recipeMatches = eachRecipe["matches"] as? [String: AnyObject] else { return }
-            print(matches)
-            let rating = recipeMatches["rating"] as? Int ?? Int(API.shared.yEmptyString)
-            let recipeName = recipeMatches["recipeName"] as? String ?? API.shared.yEmptyString
-            let ingredients = recipeMatches["ingredients"] as? String ?? API.shared.yEmptyString
-            let recipeImage = recipeMatches["image"] as? String ?? API.shared.yEmptyString
-            
-            let allMatches = Matches(rating: rating, recipeName: recipeName, ingredients: ingredients, recipeImage: recipeImage, attributions: attributions)
+            guard let allRecipes = eachRecipe["matches"] as? [[String: AnyObject]] else { return }
+
+            print(allRecipes.count)
             
             
-            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                //
-            })
+            for recipe in allRecipes{
+            
+                print(recipe)
+                
+            let rating = recipe["rating"] as? Int ?? Int(API.shared.yEmptyString)
+            let recipeName = recipe["recipeName"] as? String ?? API.shared.yEmptyString
+            let ingredients = recipe["ingredients"] as? String ?? API.shared.yEmptyString //COMING BACK EMPTY
+                
+            guard let imageurls = recipe["smallImageUrls"] as? [String] else { print("BAD..."); return }
+                
+            let recipeImage = imageurls.last ?? API.shared.yEmptyString
+                
+//                print(recipeImage)
+                
+            let allMatches = Matches(rating: rating!, recipeName: recipeName, ingredients: ingredients, recipeImage: recipeImage)
+            
+            matches.append(allMatches)
+                
+            }
+            
+            NSOperationQueue.mainQueue().addOperationWithBlock { completion(success: true, recipeMatches: matches)
+            }
         }
         
     }
-
-    
     
 }

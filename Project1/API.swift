@@ -26,14 +26,15 @@ class API
         var urlString = ""
         
         if let searchTerm = searchTerm{
-            urlString = "\(yKUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&\(searchTerm)"
+            urlString = "\(yKUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&\(searchTerm)&maxResult=15"
         }else{
-            urlString = "\(yKUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)"
+            urlString = "\(yKUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&maxResult=15"
 
         }
         
         self.fetchRequestWithUrlString(urlString) { (success, json) -> () in
             if success{
+//                print(json)
                 completion(success: success, json: json)
             }
         }
@@ -47,8 +48,8 @@ class API
         let request = NSMutableURLRequest(URL: url)
         
         NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
-            print(error)
-            print(response)
+//            print(error)
+//            print(response)
             
             if let data = data {
                 
@@ -64,8 +65,17 @@ class API
             }.resume()
     }
     
-    func getImage(urlString: String, completion: (image: UIImage) -> ())
+    func getImage(smallurlString: String, completion: (image: UIImage) -> ())
     {
+        let biggerSize = "500"
+        
+        let stringArray = smallurlString.componentsSeparatedByString("=")
+        
+        if let imageURLString = stringArray.first{
+        
+        let urlString = "\(imageURLString)=s\(biggerSize)-c"
+        
+        print(urlString)
         
         NSOperationQueue().addOperationWithBlock { () -> Void in
             guard let url = NSURL(string: urlString) else { return }
@@ -75,6 +85,7 @@ class API
             NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
                 completion(image: image)
             }
+        }
         }
     }
 

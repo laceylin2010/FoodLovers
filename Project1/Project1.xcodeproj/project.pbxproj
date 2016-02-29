@@ -18,6 +18,7 @@
 		AF0A66351C8125360008E41B /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66341C8125360008E41B /* Identity.swift */; };
 		AF0A663A1C8129BF0008E41B /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66391C8129BF0008E41B /* Matches.swift */; };
 		AF0A663C1C817C030008E41B /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A663B1C817C030008E41B /* RecipeCollectionViewCell.swift */; };
+		AF0A663E1C84C6EA0008E41B /* GroceryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A663D1C84C6EA0008E41B /* GroceryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		AF0A66341C8125360008E41B /* Identity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
 		AF0A66391C8129BF0008E41B /* Matches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
 		AF0A663B1C817C030008E41B /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeCollectionViewCell.swift; path = ../RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
+		AF0A663D1C84C6EA0008E41B /* GroceryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				AF0A660D1C80C4A20008E41B /* HomeViewController.swift */,
+				AF0A663D1C84C6EA0008E41B /* GroceryViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			files = (
 				AF0A66311C80F8FD0008E41B /* Attribution.swift in Sources */,
 				AF0A66351C8125360008E41B /* Identity.swift in Sources */,
+				AF0A663E1C84C6EA0008E41B /* GroceryViewController.swift in Sources */,
 				AF0A660E1C80C4A20008E41B /* HomeViewController.swift in Sources */,
 				AF0A662F1C80F8F10008E41B /* ModelAdditions.swift in Sources */,
 				AF0A663A1C8129BF0008E41B /* Matches.swift in Sources */,

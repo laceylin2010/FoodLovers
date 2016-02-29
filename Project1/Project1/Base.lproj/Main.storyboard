@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--FoodLovers-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,26 +19,28 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u6T-24-p9a">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gsw-rr-d2C">
-                                    <size key="itemSize" width="522.5" height="156"/>
+                                    <size key="itemSize" width="412.5" height="223"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecipeCollectionViewCell" id="Pl2-Qg-sbC" customClass="RecipeCollectionViewCell" customModule="Project1" customModuleProvider="target">
-                                        <rect key="frame" x="39" y="64" width="522.5" height="156"/>
+                                        <rect key="frame" x="94" y="0.0" width="412.5" height="223"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="522.5" height="156"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="412.5" height="223"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Kz-5N-7wu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="522.5" height="156"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Kz-5N-7wu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="412.5" height="223"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="0Kz-5N-7wu" secondAttribute="trailing" id="Ogp-Im-3Rl"/>
                                             <constraint firstItem="0Kz-5N-7wu" firstAttribute="leading" secondItem="Pl2-Qg-sbC" secondAttribute="leading" id="POn-pv-u9w"/>
@@ -51,8 +53,8 @@
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kK9-hw-qPe"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Xv0-i9-RJu"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="5pg-Lg-Ey1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Bh1-up-5Id"/>
                                 </connections>
                             </collectionView>
                         </subviews>
@@ -64,9 +66,9 @@
                             <constraint firstItem="u6T-24-p9a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kZC-cU-4sX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1VP-UR-auw"/>
+                    <navigationItem key="navigationItem" title="FoodLovers" id="1VP-UR-auw"/>
                     <connections>
-                        <outlet property="collectionView" destination="u6T-24-p9a" id="2mn-th-mMk"/>
+                        <outlet property="collectionView" destination="u6T-24-p9a" id="HYd-RU-k8A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -92,6 +94,67 @@
             </objects>
             <point key="canvasLocation" x="1183" y="-355"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="1Dp-f3-7uQ">
+            <objects>
+                <viewController id="RWH-e1-YV6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W5H-cr-FyX"/>
+                        <viewControllerLayoutGuide type="bottom" id="kFn-1A-EMZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gRp-ns-fH8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dW2-E7-i7J"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ccz-BZ-rZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1183" y="427"/>
+        </scene>
+        <!--Grocery List-->
+        <scene sceneID="M3B-4X-cmb">
+            <objects>
+                <viewController id="7fE-Di-Xom" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V5D-QT-NYG"/>
+                        <viewControllerLayoutGuide type="bottom" id="s4W-wV-wk6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qJ9-sk-I53">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ocF-4p-Er2">
+                                <rect key="frame" x="20" y="85" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zvj-ji-KD9">
+                                <rect key="frame" x="20" y="123" width="560" height="428"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="V0a-7U-Jox">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V0a-7U-Jox" id="ps3-j8-IwU">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Grocery List" id="q9a-TZ-CsD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Wy4-yU-33l"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U0t-nE-9EO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1995" y="1120"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kKF-UM-6SL">
             <objects>
@@ -103,11 +166,51 @@
                     </tabBar>
                     <connections>
                         <segue destination="o5L-KR-Q2H" kind="relationship" relationship="viewControllers" id="Gnz-hF-TBU"/>
+                        <segue destination="yFR-HY-f0B" kind="relationship" relationship="viewControllers" id="OFk-Jd-BJE"/>
+                        <segue destination="A5y-en-xgj" kind="relationship" relationship="viewControllers" id="CmI-4Z-qgf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PlM-is-BNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="371" y="-355"/>
+        </scene>
+        <!--Search Recipes-->
+        <scene sceneID="DoH-jA-nbD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yFR-HY-f0B" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search Recipes" id="9ys-9V-1M1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lo9-zS-efb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RWH-e1-YV6" kind="relationship" relationship="rootViewController" id="Ko9-nb-IpC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jpj-2A-0zL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="371" y="427"/>
+        </scene>
+        <!--Grocery List-->
+        <scene sceneID="XrJ-bu-Jxg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A5y-en-xgj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Grocery List" id="l1r-H7-W3v"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OcK-Qm-zKs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7fE-Di-Xom" kind="relationship" relationship="rootViewController" id="k77-Uk-eGS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vEG-wK-eEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1183" y="1120"/>
         </scene>
     </scenes>
 </document>
