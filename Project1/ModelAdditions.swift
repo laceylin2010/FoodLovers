@@ -57,6 +57,8 @@ extension Matches
             let rating = recipe["rating"] as? Int ?? Int(API.shared.yEmptyString)
             let recipeName = recipe["recipeName"] as? String ?? API.shared.yEmptyString
             let ingredients = recipe["ingredients"] as? String ?? API.shared.yEmptyString //COMING BACK EMPTY
+            guard let totalTime = recipe["totalTimeInSeconds"] as? Int else { return }
+                print(totalTime)
                 
             guard let imageurls = recipe["smallImageUrls"] as? [String] else { print("BAD..."); return }
                 
@@ -64,7 +66,7 @@ extension Matches
                 
 //                print(recipeImage)
                 
-            let allMatches = Matches(rating: rating!, recipeName: recipeName, ingredients: ingredients, recipeImage: recipeImage)
+            let allMatches = Matches(rating: rating!, recipeName: recipeName, ingredients: ingredients, recipeImage: recipeImage, totalTime: totalTime)
             
             matches.append(allMatches)
                 

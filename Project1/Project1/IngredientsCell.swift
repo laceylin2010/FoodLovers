@@ -6,4 +6,14 @@
 //  Copyright © 2016 Lacey Vu. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class IngredientsCell: UICollectionViewCell, Identity
+{
+    class func id() -> String
+    {
+        return "IngredientsCell"
+    }
+}
+
+

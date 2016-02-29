@@ -8,28 +8,70 @@
 
 import UIKit
 
-class InfoViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+class InfoViewController: UIViewController, Identity, UITableViewDataSource, UITableViewDelegate
+{
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    var matches: Matches?
+    
+    var dataSource = [Matches](){
+        didSet{
+            self.tableView.reloadData()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    class func id() -> String
+    {
+        return "InfoViewController"
     }
-    */
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        setupRecipe()
+        
+    }
+
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+       
+
+    }
+
+    override func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
+        
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let reuseCell = self.tableView.dequeueReusableCellWithIdentifier("ingredientsCell", forIndexPath: indexPath)
+        let ingredientsCell = self.dataSource[indexPath.row]
+        
+        reuseCell.textLabel?.text = ingredientsCell.ingredients
+        return reuseCell
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return self.dataSource.count
+    }
+    
+    func setupRecipe()
+    {
+        if let match = matches{
+            self.ratingLabel.text = String("Rating: \(match.rating)")
+            self.timeLabel.text = String("Total Time: \(match.totalTime)")
+            API.shared.getImage(match.recipeImage, completion: { (image) -> () in
+                self.imageView.image = image
+            })
+        }
+
+    }
+    
 
 }

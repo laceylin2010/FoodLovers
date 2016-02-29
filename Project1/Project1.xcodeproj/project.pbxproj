@@ -19,6 +19,9 @@
 		AF0A663A1C8129BF0008E41B /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66391C8129BF0008E41B /* Matches.swift */; };
 		AF0A663C1C817C030008E41B /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A663B1C817C030008E41B /* RecipeCollectionViewCell.swift */; };
 		AF0A663E1C84C6EA0008E41B /* GroceryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A663D1C84C6EA0008E41B /* GroceryViewController.swift */; };
+		AF0A66401C84DBB00008E41B /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A663F1C84DBB00008E41B /* InfoViewController.swift */; };
+		AF0A66421C84E0EF0008E41B /* IngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66411C84E0EF0008E41B /* IngredientsCell.swift */; };
+		AF0A66441C84EDB60008E41B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66431C84EDB60008E41B /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		AF0A66391C8129BF0008E41B /* Matches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
 		AF0A663B1C817C030008E41B /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeCollectionViewCell.swift; path = ../RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF0A663D1C84C6EA0008E41B /* GroceryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryViewController.swift; sourceTree = "<group>"; };
+		AF0A663F1C84DBB00008E41B /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		AF0A66411C84E0EF0008E41B /* IngredientsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsCell.swift; sourceTree = "<group>"; };
+		AF0A66431C84EDB60008E41B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +90,9 @@
 		AF0A661D1C80C6270008E41B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AF0A663F1C84DBB00008E41B /* InfoViewController.swift */,
 				AF0A660D1C80C4A20008E41B /* HomeViewController.swift */,
+				AF0A66431C84EDB60008E41B /* SearchViewController.swift */,
 				AF0A663D1C84C6EA0008E41B /* GroceryViewController.swift */,
 			);
 			name = Controller;
@@ -95,6 +103,7 @@
 			children = (
 				AF0A663B1C817C030008E41B /* RecipeCollectionViewCell.swift */,
 				AF0A660F1C80C4A20008E41B /* Main.storyboard */,
+				AF0A66411C84E0EF0008E41B /* IngredientsCell.swift */,
 			);
 			name = VIew;
 			sourceTree = "<group>";
@@ -202,6 +211,9 @@
 				AF0A66351C8125360008E41B /* Identity.swift in Sources */,
 				AF0A663E1C84C6EA0008E41B /* GroceryViewController.swift in Sources */,
 				AF0A660E1C80C4A20008E41B /* HomeViewController.swift in Sources */,
+				AF0A66421C84E0EF0008E41B /* IngredientsCell.swift in Sources */,
+				AF0A66401C84DBB00008E41B /* InfoViewController.swift in Sources */,
+				AF0A66441C84EDB60008E41B /* SearchViewController.swift in Sources */,
 				AF0A662F1C80F8F10008E41B /* ModelAdditions.swift in Sources */,
 				AF0A663A1C8129BF0008E41B /* Matches.swift in Sources */,
 				AF0A663C1C817C030008E41B /* RecipeCollectionViewCell.swift in Sources */,

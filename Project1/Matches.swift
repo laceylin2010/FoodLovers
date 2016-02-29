@@ -14,13 +14,15 @@ class Matches
     let recipeName: String
     let ingredients: String
     let recipeImage: String
+    let totalTime: Int
 
     
-    init(rating: Int, recipeName: String, ingredients: String, recipeImage: String)
+    init(rating: Int, recipeName: String, ingredients: String, recipeImage: String, totalTime: Int)
     {
         self.rating = rating
         self.recipeName = recipeName
         self.ingredients = ingredients
         self.recipeImage = recipeImage
+        self.totalTime = totalTime
     }
 }

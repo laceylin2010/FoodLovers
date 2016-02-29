@@ -72,5 +72,27 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        self.performSegueWithIdentifier("InfoViewController", sender: nil)
+    }
+    
+    
+}
+
+extension HomeViewController
+{
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == InfoViewController.id(){
+            if let infoViewController = segue.destinationViewController as? InfoViewController{
+                if let indexPath = self.collectionView.indexPathsForSelectedItems()?.first {
+                    let matches = self.dataSource[indexPath.row]
+                    infoViewController.matches = matches
+                }
+            }
+        }
+    }
 }
 
