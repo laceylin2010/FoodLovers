@@ -73,17 +73,16 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
         return ingridients.count
     }
     
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
-//    {
-//        //
-//    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        //
+    }
     
     func setupRecipe()
     {
         if let match = matches{
             self.ratingLabel.text = String("Rating: \(match.rating)")
-            self.timeLabel.text = String("Total Time: \(match.totalTime)")
-            self.instructionsLabel.text = String("See Instructions ->\(match.url)")
+            self.timeLabel.text = String("Total Time: \(match.totalTime)");
             API.shared.getImage(match.recipeImage, completion: { (image) -> () in
                 self.imageView.image = image
             })

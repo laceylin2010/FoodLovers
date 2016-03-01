@@ -17,30 +17,30 @@ class API
     
     let yKeyId = "958f46cf"
     let yKeyAuth = "6b22afe2cbf567bfc13b17095c17152b"
-    let yKUrlStringForSearch = "http://api.yummly.com/v1/api/recipes?"// THIS
+    let yUrlStringForSearch = "http://api.yummly.com/v1/api/recipes?"// THIS
     let yEmptyString = ""
 
     
-    func getRecipes(searchTerm:String?, completion: APICompletionHandler)
+    func getRecipes(searchTerm:String?, maxResults: Int? = 15, completion: APICompletionHandler)
     {
         var urlString = ""
         
-        if let searchTerm = searchTerm{
-            urlString = "\(yKUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&\(searchTerm)&maxResult=15"
-        }else{
-            urlString = "\(yKUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&maxResult=15"
+        if let searchTerm = searchTerm {
+            urlString = "\(yUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&\(searchTerm)&maxResult=\(maxResults!)"
+            
+        } else {
+            urlString = "\(yUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&maxResult=15&"
 
         }
         
         self.fetchRequestWithUrlString(urlString) { (success, json) -> () in
             if success{
-//                print(json)
+                print(json)
                 completion(success: success, json: json)
             }
         }
         
     }
-
     
     func fetchRequestWithUrlString(urlString: String, completion: APICompletionHandler)
     {
@@ -48,12 +48,14 @@ class API
         let request = NSMutableURLRequest(URL: url)
         
         NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
-//            print(error)
-//            print(response)
+            print(error)
+            print(response)
             
             if let data = data {
                 
                 if let json = try! NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? [String: AnyObject]{
+                    
+                    print(json)
 
                     NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                         completion(success: true, json: json)
