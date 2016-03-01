@@ -21,6 +21,7 @@ import UIKit
 class SearchViewCell: UICollectionViewCell, Identity
 {
     
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
     var matches: Matches?{
@@ -39,11 +40,19 @@ class SearchViewCell: UICollectionViewCell, Identity
         if let matches =  matches{
             API.shared.getImage(matches.recipeImage, completion: { (image) -> () in
                 self.imageView.image = image
+                self.nameLabel.text = matches.recipeName
                 
             })
             
         }
     }
+    
+    override func prepareForReuse()
+    {
+        super.prepareForReuse()
+        self.imageView.image = nil
+    }
+
     
 }
 

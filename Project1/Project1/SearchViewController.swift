@@ -14,6 +14,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    var matches: Matches?
     
     var dataSource = [Matches](){
         didSet{
@@ -58,9 +59,23 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         if let searchText = searchBar.text {
             Matches.updateRecipes(searchText) { (success, recipeMatches) -> () in
                 self.dataSource = recipeMatches
-                
             }
         }
     }
     
+}
+
+extension SearchViewController
+{
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == InfoViewController.id(){
+            if let infoViewController = segue.destinationViewController as? InfoViewController{
+                if let indexPath = self.collectionView.indexPathsForSelectedItems()?.first{
+                    let matches = self.dataSource[indexPath.row]
+                    infoViewController.matches = matches
+                }
+            }
+        }
+    }
 }

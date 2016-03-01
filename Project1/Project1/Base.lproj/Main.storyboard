@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--FoodLovers-->
@@ -258,8 +259,11 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wcU-PO-TFh">
                                                     <rect key="frame" x="0.0" y="0.0" width="185" height="155"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upv-Hm-DiJ">
-                                                    <rect key="frame" x="62" y="126" width="102" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upv-Hm-DiJ">
+                                                    <rect key="frame" x="17" y="117" width="150" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="oMf-92-4Ra"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -268,15 +272,17 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="Upv-Hm-DiJ" firstAttribute="centerX" secondItem="wcU-PO-TFh" secondAttribute="centerX" id="Gnw-Cy-2zo"/>
+                                            <constraint firstItem="Upv-Hm-DiJ" firstAttribute="bottom" secondItem="rh6-O1-1Sd" secondAttribute="bottomMargin" id="Ipw-RQ-4yQ"/>
                                             <constraint firstItem="wcU-PO-TFh" firstAttribute="top" secondItem="rh6-O1-1Sd" secondAttribute="top" id="MvQ-a9-HZZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="Upv-Hm-DiJ" secondAttribute="trailing" constant="21" id="Otz-5f-FT2"/>
                                             <constraint firstItem="wcU-PO-TFh" firstAttribute="leading" secondItem="rh6-O1-1Sd" secondAttribute="leading" id="bRz-mj-Z21"/>
-                                            <constraint firstAttribute="bottom" secondItem="Upv-Hm-DiJ" secondAttribute="bottom" constant="8" id="eD8-AI-S9S"/>
                                             <constraint firstAttribute="trailing" secondItem="wcU-PO-TFh" secondAttribute="trailing" id="ewq-N5-gN6"/>
                                             <constraint firstAttribute="bottom" secondItem="wcU-PO-TFh" secondAttribute="bottom" id="fG6-0M-T25"/>
+                                            <constraint firstItem="Upv-Hm-DiJ" firstAttribute="leading" secondItem="rh6-O1-1Sd" secondAttribute="leadingMargin" constant="9" id="sKe-ae-847"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="wcU-PO-TFh" id="hPk-yE-Ehu"/>
+                                            <outlet property="nameLabel" destination="Upv-Hm-DiJ" id="Stv-LG-Jt1"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -297,11 +303,12 @@
                     <connections>
                         <outlet property="collectionView" destination="KHd-O9-hKd" id="pgp-4Z-xfD"/>
                         <outlet property="searchBar" destination="nCD-M7-Qfm" id="nEH-TO-tV3"/>
+                        <segue destination="1yZ-oH-hWu" kind="show" identifier="searchSegue" id="VVz-mv-HWv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ccz-BZ-rZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1183" y="427"/>
+            <point key="canvasLocation" x="1415" y="419"/>
         </scene>
         <!--Grocery List-->
         <scene sceneID="M3B-4X-cmb">
@@ -413,4 +420,7 @@
             <point key="canvasLocation" x="1183" y="1120"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="VVz-mv-HWv"/>
+    </inferredMetricsTieBreakers>
 </document>

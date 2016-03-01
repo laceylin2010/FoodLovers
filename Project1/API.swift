@@ -21,12 +21,14 @@ class API
     let yEmptyString = ""
 
     
-    func getRecipes(searchTerm:String?, maxResults: Int? = 15, completion: APICompletionHandler)
+    func getRecipes(searchTerm:String?, maxResults: Int? = 20, completion: APICompletionHandler)
     {
         var urlString = ""
         
         if let searchTerm = searchTerm {
-            urlString = "\(yUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&\(searchTerm)&maxResult=\(maxResults!)"
+            urlString = "\(yUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&q=\(searchTerm)&maxResult=\(maxResults!)"
+            
+            print(urlString)
             
         } else {
             urlString = "\(yUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&maxResult=15&"

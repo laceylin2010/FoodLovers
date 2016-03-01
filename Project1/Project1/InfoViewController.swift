@@ -40,23 +40,6 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
         super.didReceiveMemoryWarning()
         
     }
-    
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-//    {
-//        if segue.identifier == WebViewController.id(){
-//            if let webViewController = segue.destinationViewController as? WebViewController{
-//                if let indexPath = self.instructionsLabel{
-//                    webViewController.matches = matches
-//                }
-//                if let indexPath = self.tableView.indexPathForSelectedRow {
-//                  let match = self.dataSource[indexPath.row]
-//                   webViewController.matches = match
-//
-//                }
-//            }
-//            
-//        }
-//    }
 
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -71,11 +54,6 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     {
         guard let ingridients = self.matches?.ingredients else { return 0 }
         return ingridients.count
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
-    {
-        //
     }
     
     func setupRecipe()
