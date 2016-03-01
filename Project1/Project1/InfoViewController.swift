@@ -14,6 +14,7 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var instructionsLabel: UILabel!
     
     var matches: Matches?
     
@@ -47,6 +48,24 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == WebViewController.id(){
+            if let webViewController = segue.destinationViewController as? WebViewController{
+                if let indexPath = self.instructionsLabel{
+                    webViewController.matches = matches
+                }
+//                if let indexPath = self.tableView.indexPathForSelectedRow {
+//                  let match = self.dataSource[indexPath.row]
+//                   webViewController.matches = match
+//
+//                }
+            }
+            
+        }
+    }
+
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let reuseCell = self.tableView.dequeueReusableCellWithIdentifier("ingredientsCell", forIndexPath: indexPath)
@@ -59,6 +78,11 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return self.dataSource.count
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        //
     }
     
     func setupRecipe()

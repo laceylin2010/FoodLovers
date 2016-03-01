@@ -22,6 +22,7 @@
 		AF0A66401C84DBB00008E41B /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A663F1C84DBB00008E41B /* InfoViewController.swift */; };
 		AF0A66421C84E0EF0008E41B /* IngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66411C84E0EF0008E41B /* IngredientsCell.swift */; };
 		AF0A66441C84EDB60008E41B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66431C84EDB60008E41B /* SearchViewController.swift */; };
+		AF0A66461C8511910008E41B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66451C8511910008E41B /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		AF0A663F1C84DBB00008E41B /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		AF0A66411C84E0EF0008E41B /* IngredientsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsCell.swift; sourceTree = "<group>"; };
 		AF0A66431C84EDB60008E41B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		AF0A66451C8511910008E41B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		AF0A661D1C80C6270008E41B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AF0A66451C8511910008E41B /* WebViewController.swift */,
 				AF0A663F1C84DBB00008E41B /* InfoViewController.swift */,
 				AF0A660D1C80C4A20008E41B /* HomeViewController.swift */,
 				AF0A66431C84EDB60008E41B /* SearchViewController.swift */,
@@ -218,6 +221,7 @@
 				AF0A663A1C8129BF0008E41B /* Matches.swift in Sources */,
 				AF0A663C1C817C030008E41B /* RecipeCollectionViewCell.swift in Sources */,
 				AF0A66211C80C6470008E41B /* API.swift in Sources */,
+				AF0A66461C8511910008E41B /* WebViewController.swift in Sources */,
 				AF0A660C1C80C4A20008E41B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

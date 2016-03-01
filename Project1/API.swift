@@ -75,7 +75,7 @@ class API
         
         let urlString = "\(imageURLString)=s\(biggerSize)-c"
         
-        print(urlString)
+//        print(urlString)
         
         NSOperationQueue().addOperationWithBlock { () -> Void in
             guard let url = NSURL(string: urlString) else { return }
