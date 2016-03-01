@@ -17,13 +17,7 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     @IBOutlet weak var instructionsLabel: UILabel!
     
     var matches: Matches?
-    
-    var dataSource = [Matches](){
-        didSet{
-            self.tableView.reloadData()
-        }
-    }
-    
+
     class func id() -> String
     {
         return "InfoViewController"
@@ -31,8 +25,7 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        setupRecipe()
-        
+        self.setupRecipe()
     }
 
     override func viewDidLoad()
@@ -48,48 +41,49 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    {
-        if segue.identifier == WebViewController.id(){
-            if let webViewController = segue.destinationViewController as? WebViewController{
-                if let indexPath = self.instructionsLabel{
-                    webViewController.matches = matches
-                }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+//    {
+//        if segue.identifier == WebViewController.id(){
+//            if let webViewController = segue.destinationViewController as? WebViewController{
+//                if let indexPath = self.instructionsLabel{
+//                    webViewController.matches = matches
+//                }
 //                if let indexPath = self.tableView.indexPathForSelectedRow {
 //                  let match = self.dataSource[indexPath.row]
 //                   webViewController.matches = match
 //
 //                }
-            }
-            
-        }
-    }
+//            }
+//            
+//        }
+//    }
 
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let reuseCell = self.tableView.dequeueReusableCellWithIdentifier("ingredientsCell", forIndexPath: indexPath)
-        let ingredientsCell = self.dataSource[indexPath.row]
-        
-        reuseCell.textLabel?.text = ingredientsCell.ingredients
+        let ingredientCell = self.matches?.ingredients[indexPath.row]
+        reuseCell.textLabel?.text = ingredientCell
         return reuseCell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return self.dataSource.count
+        guard let ingridients = self.matches?.ingredients else { return 0 }
+        return ingridients.count
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
-    {
-        //
-    }
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+//    {
+//        //
+//    }
     
     func setupRecipe()
     {
         if let match = matches{
             self.ratingLabel.text = String("Rating: \(match.rating)")
             self.timeLabel.text = String("Total Time: \(match.totalTime)")
+            self.instructionsLabel.text = String("See Instructions ->\(match.url)")
             API.shared.getImage(match.recipeImage, completion: { (image) -> () in
                 self.imageView.image = image
             })

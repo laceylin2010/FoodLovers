@@ -12,13 +12,13 @@ class Matches
 {
     let rating: Int
     let recipeName: String
-    let ingredients: String
+    let ingredients: [String]
     let recipeImage: String
     let totalTime: Int
     var url: String
 
     
-    init(rating: Int, recipeName: String, ingredients: String, recipeImage: String, totalTime: Int, url: String)
+    init(rating: Int, recipeName: String, ingredients: [String], recipeImage: String, totalTime: Int, url: String)
     {
         self.rating = rating
         self.recipeName = recipeName

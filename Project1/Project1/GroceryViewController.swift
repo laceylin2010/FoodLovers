@@ -8,7 +8,19 @@
 
 import UIKit
 
-class GroceryViewController: UIViewController {
+class GroceryViewController: UIViewController, Identity
+{
+    
+    var searchArray = [Matches](){
+        didSet{
+            //
+        }
+    }
+    
+    class func id() -> String
+    {
+        return "GroceryViewController"
+    }
 
     override func viewDidLoad()
     {
