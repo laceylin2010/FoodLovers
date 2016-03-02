@@ -10,11 +10,9 @@ import UIKit
 
 class InfoViewController: UIViewController, Identity, UITableViewDataSource, UITableViewDelegate
 {
+
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var ratingLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var instructionsLabel: UILabel!
     
     var matches: Matches?
     
@@ -31,14 +29,13 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.setupRecipe()
-       
     }
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
         self.navigationItem.title = matches?.recipeName
+        setupRecipe()
 
     }
 
@@ -49,32 +46,77 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     }
 
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
-        let reuseCell = self.tableView.dequeueReusableCellWithIdentifier("ingredientsCell", forIndexPath: indexPath)
-        let ingredientCell = self.matches?.ingredients[indexPath.row]
-        reuseCell.textLabel?.text = ingredientCell
-        return reuseCell
+        return 2
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        guard let ingredients = self.matches?.ingredients else { return 0 }
-        return ingredients.count
+        var numberOfRows = Int()
+        
+        if section == 0 {
+            numberOfRows = 1
+        } else {
+            if let matches = self.matches{
+               numberOfRows = matches.ingredients.count
+            }
+        }
+        
+        return numberOfRows
     }
+   
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
+        var header = String()
+        
+        if section == 1{
+            header = "Ingredients"
+        }
+        
+        return header
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        var cell = UITableViewCell()
+    
+        if indexPath.section ==  0 {
+            if let cell = self.tableView.dequeueReusableCellWithIdentifier("infoCell", forIndexPath: indexPath) as? InfoTableViewCell{
+                if let matches = self.matches{
+                    cell.matches = matches
+                    cell.ratingLabel.text = "Rating: \(matches.rating)"
+                    cell.timeLabel.text = "Total Time: \(matches.totalTime)"
+                }
+            }
+        } else if indexPath.section == 1 {
+            cell = self.tableView.dequeueReusableCellWithIdentifier("ingredientsCell", forIndexPath: indexPath)
+            cell.textLabel?.text = matches?.ingredients[indexPath.row]
+        }
+        
+        return cell
+
+    }
+    
     
     func setupRecipe()
     {
         if let match = matches{
-            self.ratingLabel.text = String("Rating: \(match.rating)")
-            self.timeLabel.text = String("Total Time: \(match.totalTime)");
             API.shared.getImage(match.recipeImage, completion: { (image) -> () in
                 self.imageView.image = image
+
             })
         }
-
+        
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 0{
+            return 75
+        }
+        return tableView.rowHeight
+    }
 
 }
 

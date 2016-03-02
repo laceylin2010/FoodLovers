@@ -8,11 +8,12 @@
 //
 import UIKit
 
-class GroceryViewController: UIViewController, Identity, UITableViewDelegate, UITableViewDataSource
+class GroceryViewController: UIViewController, Identity, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate
 {
-    
-    @IBOutlet weak var ingredient: UITextField!
+    @IBOutlet weak var ingredientTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    
+    var allCellsText = [String]()
     
     class func id() -> String
     {
@@ -31,18 +32,15 @@ class GroceryViewController: UIViewController, Identity, UITableViewDelegate, UI
       
     }
     
-    func configureCell(indexPath: NSIndexPath) -> UITableViewCell
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("taskCell", forIndexPath: indexPath)
         let item = GroceryMemory.shared.objectAtIndex(indexPath.row)
         cell.textLabel?.text = item?.groceryItem
-        
+
         return cell
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
-    {
-        return self.configureCell(indexPath)
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -54,12 +52,12 @@ class GroceryViewController: UIViewController, Identity, UITableViewDelegate, UI
     {
         return true
     }
-    
+
 //    @IBAction func AddButton(sender: UIButton)
 //    {
 //        guard let ingredientItem = self.ingredient.text else { return }
 //        
-//        let groceryItem = Grocery(groceryItem: description, identifier: )
+//
 //    }
 
 }

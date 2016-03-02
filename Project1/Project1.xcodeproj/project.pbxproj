@@ -19,7 +19,7 @@
 		AF0A663C1C817C030008E41B /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A663B1C817C030008E41B /* RecipeCollectionViewCell.swift */; };
 		AF0A663E1C84C6EA0008E41B /* GroceryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A663D1C84C6EA0008E41B /* GroceryViewController.swift */; };
 		AF0A66401C84DBB00008E41B /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A663F1C84DBB00008E41B /* InfoViewController.swift */; };
-		AF0A66421C84E0EF0008E41B /* IngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66411C84E0EF0008E41B /* IngredientsCell.swift */; };
+		AF0A66421C84E0EF0008E41B /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66411C84E0EF0008E41B /* IngredientTableViewCell.swift */; };
 		AF0A66441C84EDB60008E41B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66431C84EDB60008E41B /* SearchViewController.swift */; };
 		AF0A66461C8511910008E41B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66451C8511910008E41B /* WebViewController.swift */; };
 		AF0A664C1C8632CB0008E41B /* SearchRecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A664B1C8632CB0008E41B /* SearchRecipeCell.swift */; };
@@ -27,6 +27,7 @@
 		AF0A66541C8662A80008E41B /* Grocery.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66531C8662A80008E41B /* Grocery.swift */; };
 		AF0A66561C8667790008E41B /* Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66551C8667790008E41B /* Additions.swift */; };
 		AF0A66581C8668FB0008E41B /* GroceryMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66571C8668FB0008E41B /* GroceryMemory.swift */; };
+		AF66A3BB1C8751B900EAAD9A /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66A3BA1C8751B900EAAD9A /* InfoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +45,7 @@
 		AF0A663B1C817C030008E41B /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeCollectionViewCell.swift; path = ../RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF0A663D1C84C6EA0008E41B /* GroceryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryViewController.swift; sourceTree = "<group>"; };
 		AF0A663F1C84DBB00008E41B /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		AF0A66411C84E0EF0008E41B /* IngredientsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsCell.swift; sourceTree = "<group>"; };
+		AF0A66411C84E0EF0008E41B /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		AF0A66431C84EDB60008E41B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		AF0A66451C8511910008E41B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		AF0A664B1C8632CB0008E41B /* SearchRecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRecipeCell.swift; sourceTree = "<group>"; };
@@ -52,6 +53,7 @@
 		AF0A66531C8662A80008E41B /* Grocery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grocery.swift; sourceTree = "<group>"; };
 		AF0A66551C8667790008E41B /* Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Additions.swift; sourceTree = "<group>"; };
 		AF0A66571C8668FB0008E41B /* GroceryMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryMemory.swift; sourceTree = "<group>"; };
+		AF66A3BA1C8751B900EAAD9A /* InfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +117,8 @@
 			children = (
 				AF0A664B1C8632CB0008E41B /* SearchRecipeCell.swift */,
 				AF0A663B1C817C030008E41B /* RecipeCollectionViewCell.swift */,
-				AF0A66411C84E0EF0008E41B /* IngredientsCell.swift */,
+				AF0A66411C84E0EF0008E41B /* IngredientTableViewCell.swift */,
+				AF66A3BA1C8751B900EAAD9A /* InfoTableViewCell.swift */,
 			);
 			name = VIew;
 			sourceTree = "<group>";
@@ -225,9 +228,10 @@
 				AF0A664C1C8632CB0008E41B /* SearchRecipeCell.swift in Sources */,
 				AF0A66351C8125360008E41B /* Identity.swift in Sources */,
 				AF0A66561C8667790008E41B /* Additions.swift in Sources */,
+				AF66A3BB1C8751B900EAAD9A /* InfoTableViewCell.swift in Sources */,
 				AF0A663E1C84C6EA0008E41B /* GroceryViewController.swift in Sources */,
 				AF0A660E1C80C4A20008E41B /* HomeViewController.swift in Sources */,
-				AF0A66421C84E0EF0008E41B /* IngredientsCell.swift in Sources */,
+				AF0A66421C84E0EF0008E41B /* IngredientTableViewCell.swift in Sources */,
 				AF0A66541C8662A80008E41B /* Grocery.swift in Sources */,
 				AF0A66401C84DBB00008E41B /* InfoViewController.swift in Sources */,
 				AF0A66441C84EDB60008E41B /* SearchViewController.swift in Sources */,

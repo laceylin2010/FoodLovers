@@ -8,12 +8,18 @@
 
 import UIKit
 
-class IngredientsCell: UICollectionViewCell, Identity
+class IngredientTableViewCell: UITableViewCell, Identity
 {
+    
+    
+    var matches: Matches?
+    
     class func id() -> String
     {
-        return "IngredientsCell"
+        return "IngredientTableViewCell"
     }
+    
+
 }
 
 
