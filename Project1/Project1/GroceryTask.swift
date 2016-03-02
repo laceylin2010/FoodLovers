@@ -61,7 +61,7 @@ extension ItemList
 
     }
     
-    func objectAtIndex(index: Int) -> Object
+    func objectAtIndex(index: Int) -> Object?
     {
        return self.itemList[index]
     }

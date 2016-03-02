@@ -205,7 +205,7 @@
         <scene sceneID="PlF-9E-cuO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o5L-KR-Q2H" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="i9k-Kv-crl"/>
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="Add Rule-50" id="i9k-Kv-crl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fnC-YV-7o3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -220,7 +220,7 @@
             </objects>
             <point key="canvasLocation" x="1183" y="-355"/>
         </scene>
-        <!--Search View Controller-->
+        <!--Search-->
         <scene sceneID="1Dp-f3-7uQ">
             <objects>
                 <viewController id="RWH-e1-YV6" customClass="SearchViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
@@ -299,7 +299,7 @@
                             <constraint firstItem="nCD-M7-Qfm" firstAttribute="leading" secondItem="gRp-ns-fH8" secondAttribute="leading" id="Myd-Ta-uZa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dW2-E7-i7J"/>
+                    <navigationItem key="navigationItem" title="Search" id="dW2-E7-i7J"/>
                     <connections>
                         <outlet property="collectionView" destination="KHd-O9-hKd" id="pgp-4Z-xfD"/>
                         <outlet property="searchBar" destination="nCD-M7-Qfm" id="nEH-TO-tV3"/>
@@ -420,7 +420,9 @@
         <scene sceneID="XrJ-bu-Jxg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A5y-en-xgj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Grocery List" id="l1r-H7-W3v"/>
+                    <tabBarItem key="tabBarItem" title="Grocery List" image="Add Rule-50" id="l1r-H7-W3v">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OcK-Qm-zKs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -436,6 +438,9 @@
             <point key="canvasLocation" x="1183" y="1120"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Add Rule-50" width="50" height="50"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VVz-mv-HWv"/>
     </inferredMetricsTieBreakers>
