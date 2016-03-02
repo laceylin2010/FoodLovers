@@ -46,7 +46,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     {
         
         Matches.updateRecipes(nil) { (success, recipeMatches) -> () in
-            print("yay!")
                 self.dataSource = recipeMatches
         }
 

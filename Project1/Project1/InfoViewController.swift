@@ -17,6 +17,12 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     @IBOutlet weak var instructionsLabel: UILabel!
     
     var matches: Matches?
+    
+    var dataSource = [Matches](){
+        didSet{
+            self.tableView.reloadData()
+        }
+    }
 
     class func id() -> String
     {
@@ -69,4 +75,24 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     }
     
 
+}
+
+extension InfoViewController
+{
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == WebViewController.id(){
+            if let webViewController = segue.destinationViewController as? WebViewController{
+                if let indexPath = self.instructionsLabel{
+                    webViewController.matches = matches
+                }
+                if let indexPath = self.tableView.indexPathForSelectedRow {
+                  let match = self.dataSource[indexPath.row]
+                   webViewController.matches = match
+
+                }
+            }
+            
+        }
+    }
 }

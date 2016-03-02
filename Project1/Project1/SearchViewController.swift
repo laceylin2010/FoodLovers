@@ -54,6 +54,11 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         return self.dataSource.count
     }
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        self.performSegueWithIdentifier("InfoViewController", sender: nil)
+    }
+    
     func searchBarSearchButtonClicked(searchBar: UISearchBar)
     {
         if let searchText = searchBar.text {

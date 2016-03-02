@@ -27,8 +27,7 @@ class API
         
         if let searchTerm = searchTerm {
             urlString = "\(yUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&q=\(searchTerm)&maxResult=\(maxResults!)"
-            
-            print(urlString)
+
             
         } else {
             urlString = "\(yUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&maxResult=15&"
@@ -37,7 +36,6 @@ class API
         
         self.fetchRequestWithUrlString(urlString) { (success, json) -> () in
             if success{
-                print(json)
                 completion(success: success, json: json)
             }
         }
@@ -48,16 +46,13 @@ class API
     {
         let url = NSURL(string: urlString)!
         let request = NSMutableURLRequest(URL: url)
-        
+
         NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
-            print(error)
-            print(response)
             
             if let data = data {
                 
                 if let json = try! NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? [String: AnyObject]{
-                    
-                    print(json)
+
 
                     NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                         completion(success: true, json: json)
@@ -67,20 +62,17 @@ class API
             }
             
             }.resume()
+
     }
+    
     
     func getImage(smallurlString: String, completion: (image: UIImage) -> ())
     {
         let biggerSize = "500"
-        
         let stringArray = smallurlString.componentsSeparatedByString("=")
-        
         if let imageURLString = stringArray.first{
-        
         let urlString = "\(imageURLString)=s\(biggerSize)-c"
-        
-//        print(urlString)
-        
+
         NSOperationQueue().addOperationWithBlock { () -> Void in
             guard let url = NSURL(string: urlString) else { return }
             guard let data = NSData(contentsOfURL: url) else { return }

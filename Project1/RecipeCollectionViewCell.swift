@@ -34,5 +34,11 @@ class RecipeCollectionViewCell: UICollectionViewCell, Identity
             
         }
     }
+    
+    override func prepareForReuse()
+    {
+        super.prepareForReuse()
+        self.imageView.image = nil
+    }
 
 }

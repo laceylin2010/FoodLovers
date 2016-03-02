@@ -23,6 +23,10 @@
 		AF0A66441C84EDB60008E41B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66431C84EDB60008E41B /* SearchViewController.swift */; };
 		AF0A66461C8511910008E41B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66451C8511910008E41B /* WebViewController.swift */; };
 		AF0A664C1C8632CB0008E41B /* SearchRecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A664B1C8632CB0008E41B /* SearchRecipeCell.swift */; };
+		AF0A664E1C86620A0008E41B /* GroceryTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A664D1C86620A0008E41B /* GroceryTask.swift */; };
+		AF0A66541C8662A80008E41B /* Grocery.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66531C8662A80008E41B /* Grocery.swift */; };
+		AF0A66561C8667790008E41B /* Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66551C8667790008E41B /* Additions.swift */; };
+		AF0A66581C8668FB0008E41B /* GroceryMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66571C8668FB0008E41B /* GroceryMemory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		AF0A66431C84EDB60008E41B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		AF0A66451C8511910008E41B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		AF0A664B1C8632CB0008E41B /* SearchRecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRecipeCell.swift; sourceTree = "<group>"; };
+		AF0A664D1C86620A0008E41B /* GroceryTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroceryTask.swift; path = Project1/GroceryTask.swift; sourceTree = "<group>"; };
+		AF0A66531C8662A80008E41B /* Grocery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grocery.swift; sourceTree = "<group>"; };
+		AF0A66551C8667790008E41B /* Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Additions.swift; sourceTree = "<group>"; };
+		AF0A66571C8668FB0008E41B /* GroceryMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryMemory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +132,12 @@
 		AF0A662B1C80F1740008E41B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AF0A66531C8662A80008E41B /* Grocery.swift */,
+				AF0A66571C8668FB0008E41B /* GroceryMemory.swift */,
 				AF0A66391C8129BF0008E41B /* Matches.swift */,
 				AF0A662E1C80F8F10008E41B /* ModelAdditions.swift */,
+				AF0A664D1C86620A0008E41B /* GroceryTask.swift */,
+				AF0A66551C8667790008E41B /* Additions.swift */,
 			);
 			name = Models;
 			path = ..;
@@ -212,13 +224,17 @@
 			files = (
 				AF0A664C1C8632CB0008E41B /* SearchRecipeCell.swift in Sources */,
 				AF0A66351C8125360008E41B /* Identity.swift in Sources */,
+				AF0A66561C8667790008E41B /* Additions.swift in Sources */,
 				AF0A663E1C84C6EA0008E41B /* GroceryViewController.swift in Sources */,
 				AF0A660E1C80C4A20008E41B /* HomeViewController.swift in Sources */,
 				AF0A66421C84E0EF0008E41B /* IngredientsCell.swift in Sources */,
+				AF0A66541C8662A80008E41B /* Grocery.swift in Sources */,
 				AF0A66401C84DBB00008E41B /* InfoViewController.swift in Sources */,
 				AF0A66441C84EDB60008E41B /* SearchViewController.swift in Sources */,
 				AF0A662F1C80F8F10008E41B /* ModelAdditions.swift in Sources */,
+				AF0A664E1C86620A0008E41B /* GroceryTask.swift in Sources */,
 				AF0A663A1C8129BF0008E41B /* Matches.swift in Sources */,
+				AF0A66581C8668FB0008E41B /* GroceryMemory.swift in Sources */,
 				AF0A663C1C817C030008E41B /* RecipeCollectionViewCell.swift in Sources */,
 				AF0A66211C80C6470008E41B /* API.swift in Sources */,
 				AF0A66461C8511910008E41B /* WebViewController.swift in Sources */,
