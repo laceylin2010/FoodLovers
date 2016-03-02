@@ -24,11 +24,11 @@ class API
     func getRecipes(searchTerm:String?, maxResults: Int? = 20, completion: APICompletionHandler)
     {
         var urlString = ""
-        
-        if let searchTerm = searchTerm {
-            urlString = "\(yUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&q=\(searchTerm)&maxResult=\(maxResults!)"
 
-            
+        if let searchTerm = searchTerm {
+            let updatedSearchTerm = validateSpacesFromSearch(searchTerm)
+            urlString = "\(yUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&q=\(updatedSearchTerm)&maxResult=\(maxResults!)"
+
         } else {
             urlString = "\(yUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&maxResult=15&"
 
@@ -62,8 +62,17 @@ class API
             }
             
             }.resume()
-
     }
+    
+    func validateSpacesFromSearch(originalSearch: String) -> String
+    {
+        let searchArray = originalSearch.componentsSeparatedByString(" ")
+        
+        return searchArray.joinWithSeparator("+")
+    }
+    
+    
+    
     
     
     func getImage(smallurlString: String, completion: (image: UIImage) -> ())

@@ -366,9 +366,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6C-nD-bdh">
                                 <rect key="frame" x="524" y="84" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
-                                <connections>
-                                    <action selector="AddButton:" destination="7fE-Di-Xom" eventType="touchUpInside" id="pKU-Eu-rKk"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ocF-4p-Er2">
                                 <rect key="frame" x="39" y="85" width="472" height="30"/>
@@ -461,6 +458,6 @@
         <image name="Add Rule-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rTl-DB-lhn"/>
+        <segue reference="VVz-mv-HWv"/>
     </inferredMetricsTieBreakers>
 </document>
