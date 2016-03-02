@@ -358,6 +358,13 @@
                                     <outlet property="delegate" destination="7fE-Di-Xom" id="Lm4-E2-hsl"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6C-nD-bdh">
+                                <rect key="frame" x="524" y="84" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="AddButton:" destination="7fE-Di-Xom" eventType="touchUpInside" id="pKU-Eu-rKk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -371,6 +378,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Grocery List" id="q9a-TZ-CsD"/>
                     <connections>
+                        <outlet property="ingredient" destination="ocF-4p-Er2" id="OFt-NF-dGG"/>
                         <outlet property="tableView" destination="zvj-ji-KD9" id="Llv-G5-1MP"/>
                     </connections>
                 </viewController>
@@ -442,6 +450,6 @@
         <image name="Add Rule-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VVz-mv-HWv"/>
+        <segue reference="rTl-DB-lhn"/>
     </inferredMetricsTieBreakers>
 </document>

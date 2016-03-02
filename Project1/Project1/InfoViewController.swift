@@ -32,12 +32,13 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.setupRecipe()
+       
     }
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-       
+        self.navigationItem.title = matches?.recipeName
 
     }
 
@@ -58,8 +59,8 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        guard let ingridients = self.matches?.ingredients else { return 0 }
-        return ingridients.count
+        guard let ingredients = self.matches?.ingredients else { return 0 }
+        return ingredients.count
     }
     
     func setupRecipe()

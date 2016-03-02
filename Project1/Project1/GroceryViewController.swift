@@ -11,6 +11,7 @@ import UIKit
 class GroceryViewController: UIViewController, Identity, UITableViewDelegate, UITableViewDataSource
 {
     
+    @IBOutlet weak var ingredient: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
     class func id() -> String
@@ -54,5 +55,11 @@ class GroceryViewController: UIViewController, Identity, UITableViewDelegate, UI
         return true
     }
     
+//    @IBAction func AddButton(sender: UIButton)
+//    {
+//        guard let ingredientItem = self.ingredient.text else { return }
+//        
+//        let groceryItem = Grocery(groceryItem: description, identifier: )
+//    }
 
 }
