@@ -68,6 +68,13 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         }
     }
     
+    func scrollViewDidScroll(scrollView: UIScrollView)
+    {
+        if self.searchBar.isFirstResponder(){
+            self.searchBar.resignFirstResponder()
+        }
+    }
+    
 }
 
 extension SearchViewController

@@ -65,7 +65,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-//        print("Collection View Count: \(dataSource.count)")
+
         return self.dataSource.count
         
     }

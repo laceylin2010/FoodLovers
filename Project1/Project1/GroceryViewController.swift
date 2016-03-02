@@ -52,12 +52,7 @@ class GroceryViewController: UIViewController, Identity, UITableViewDelegate, UI
     {
         return true
     }
+    
 
-//    @IBAction func AddButton(sender: UIButton)
-//    {
-//        guard let ingredientItem = self.ingredient.text else { return }
-//        
-//
-//    }
 
 }

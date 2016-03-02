@@ -13,6 +13,7 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var readInstructionsLabel: UILabel!
     
     var matches: Matches?
     
@@ -120,22 +121,20 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
 
 }
 
-//extension InfoViewController
-//{
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-//    {
-//        if segue.identifier == WebViewController.id(){
-//            if let webViewController = segue.destinationViewController as? WebViewController{
-//                if let indexPath = self.instructionsLabel{
-//                    webViewController.matches = matches
-//                }
-//                if let indexPath = self.tableView.indexPathForSelectedRow {
-//                  let match = self.dataSource[indexPath.row]
-//                   webViewController.matches = match
-//
-//                }
-//            }
-//            
-//        }
-//    }
-//}
+extension InfoViewController
+{
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == WebViewController.id(){
+            if let webViewController = segue.destinationViewController as? WebViewController{
+                    webViewController.matches = self.matches
+            }
+            
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        self.performSegueWithIdentifier("WebViewController", sender: nil)
+    }
+}
