@@ -26,14 +26,15 @@ extension Matches
             
             for recipe in allRecipes{
     
-            let rating = recipe["rating"] as? Int ?? Int(API.shared.yEmptyString)
+            let rating = recipe["rating"] as? Int ?? 0
+            let id = recipe["id"] as? String ?? API.shared.yEmptyString
             let recipeName = recipe["recipeName"] as? String ?? API.shared.yEmptyString
             let ingredients = recipe["ingredients"] as? [String] ?? [] //COMING BACK EMPTY
-            guard let totalTime = recipe["totalTimeInSeconds"] as? Int else { print("BAD..."); return }
-            guard let imageurls = recipe["smallImageUrls"] as? [String] else { print("BAD..."); return }
+            let totalTime = recipe["totalTimeInSeconds"] as? Int ?? 0
+            guard let imageurls = recipe["smallImageUrls"] as? [String] else { print("Not Recieving image..."); return }
             let recipeImage = imageurls.last ?? API.shared.yEmptyString
                 
-            let allMatches = Matches(rating: rating!, recipeName: recipeName, ingredients: ingredients, recipeImage: recipeImage, totalTime: totalTime, url: foodURL)
+                let allMatches = Matches(rating: rating, recipeName: recipeName, ingredients: ingredients, recipeImage: recipeImage, totalTime: totalTime, url: foodURL, id: id)
             
             
             matches.append(allMatches)

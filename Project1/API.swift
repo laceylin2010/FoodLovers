@@ -27,10 +27,10 @@ class API
 
         if let searchTerm = searchTerm {
             let updatedSearchTerm = validateSpacesFromSearch(searchTerm)
-            urlString = "\(yUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&q=\(updatedSearchTerm)&maxResult=\(maxResults!)"
+            urlString = "\(yUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&q=\(updatedSearchTerm)&maxResult=\(maxResults!)&requirePictures=true"
 
         } else {
-            urlString = "\(yUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&maxResult=15&"
+            urlString = "\(yUrlStringForSearch)_app_id=\(yKeyId)&_app_key=\(yKeyAuth)&maxResult=15&&requirePictures=true"
 
         }
         

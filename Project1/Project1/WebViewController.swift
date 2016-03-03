@@ -35,8 +35,8 @@ class WebViewController: UIViewController, Identity
     {
         let frame = CGRect(x: 0.0, y: 50.0, width: self.view.frame.width, height: self.view.frame.height)
         let webView = WKWebView(frame: frame)
-        if let recipeURL = matches?.url{
-            let url = NSURL(string: recipeURL)
+        if let recipeId = matches?.id{
+            let url = NSURL(string: "http://www.yummly.com/recipe/\(recipeId)")
             let request = NSMutableURLRequest(URL: url!)
             
             self.view.addSubview(webView)

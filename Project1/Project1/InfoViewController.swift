@@ -88,7 +88,7 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
                 if let matches = self.matches{
                     cell.matches = matches
                     cell.ratingLabel.text = "Rating: \(matches.rating)"
-                    cell.timeLabel.text = "Total Time: \(matches.totalTime)"
+                    cell.timeLabel.text = "Total Time: About \(matches.totalTimeInMinutes) Minutes"
                 }
             }
         } else if indexPath.section == 1 {
