@@ -13,7 +13,7 @@ class GroceryViewController: UIViewController, Identity, UITableViewDelegate, UI
     @IBOutlet weak var ingredientTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
-    var allCellsText = [String]()
+    
     
     class func id() -> String
     {
@@ -32,6 +32,16 @@ class GroceryViewController: UIViewController, Identity, UITableViewDelegate, UI
       
     }
     
+  
+    @IBAction func addButton(sender: UIButton)
+    {
+        guard let title = self.ingredientTextField.text else { return }
+        let newGroceryItem = Grocery(groceryItem: title)
+        GroceryMemory.shared.add(newGroceryItem)
+        self.tableView.reloadData()
+
+    }
+
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
@@ -46,6 +56,17 @@ class GroceryViewController: UIViewController, Identity, UITableViewDelegate, UI
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return GroceryMemory.shared.count()
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if editingStyle == .Delete{
+            GroceryMemory.shared.removeObjectAtIndexPath(indexPath)
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+        }
+        
+    
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool

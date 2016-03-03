@@ -71,7 +71,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     
-    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
         self.performSegueWithIdentifier("InfoViewController", sender: nil)

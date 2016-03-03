@@ -11,9 +11,9 @@ import Foundation
 class Grocery: NSObject, NSCoding
 {
     let groceryItem: String
-    let identifier: String
+    let identifier: String?
     
-    init(groceryItem: String, identifier: String)
+    init(groceryItem: String, identifier: String? = "")
     {
         self.groceryItem = groceryItem
         self.identifier = identifier
@@ -27,7 +27,7 @@ class Grocery: NSObject, NSCoding
             fatalError("Something is wrong")
         }
         
-        guard let identifier = aDecoder.decodeObjectForKey("identifer") as? String else
+        guard let identifier = aDecoder.decodeObjectForKey("identifier") as? String else
         {
             fatalError("Something is wrong with the id")
         }

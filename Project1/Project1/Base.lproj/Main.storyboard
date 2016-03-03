@@ -332,16 +332,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llw-gg-loL">
-                                <rect key="frame" x="524" y="85" width="30" height="30"/>
-                                <state key="normal" title="Add"/>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zvj-ji-KD9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zvj-ji-KD9">
                                 <rect key="frame" x="0.0" y="123" width="600" height="428"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" textLabel="MZm-m0-QTG" rowHeight="32" style="IBUITableViewCellStyleDefault" id="V0a-7U-Jox">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="32"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="32"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V0a-7U-Jox" id="ps3-j8-IwU">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="31.5"/>
@@ -363,9 +359,12 @@
                                     <outlet property="delegate" destination="7fE-Di-Xom" id="Lm4-E2-hsl"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6C-nD-bdh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6C-nD-bdh">
                                 <rect key="frame" x="524" y="84" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addButton:" destination="7fE-Di-Xom" eventType="touchUpInside" id="IGD-qX-sOI"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ocF-4p-Er2">
                                 <rect key="frame" x="39" y="85" width="472" height="30"/>
@@ -376,16 +375,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ocF-4p-Er2" firstAttribute="leading" secondItem="qJ9-sk-I53" secondAttribute="leading" constant="39" id="BOW-D2-n6i"/>
-                            <constraint firstAttribute="trailing" secondItem="llw-gg-loL" secondAttribute="trailing" constant="46" id="INg-yJ-bUm"/>
-                            <constraint firstItem="llw-gg-loL" firstAttribute="top" secondItem="V5D-QT-NYG" secondAttribute="bottom" constant="21" id="SVd-6f-17k"/>
+                            <constraint firstItem="s4W-wV-wk6" firstAttribute="top" secondItem="zvj-ji-KD9" secondAttribute="bottom" id="Sgq-iT-Jvs"/>
                             <constraint firstItem="ocF-4p-Er2" firstAttribute="top" secondItem="V5D-QT-NYG" secondAttribute="bottom" constant="21" id="Wxm-yt-mEh"/>
-                            <constraint firstItem="llw-gg-loL" firstAttribute="leading" secondItem="ocF-4p-Er2" secondAttribute="trailing" constant="13" id="jLL-2e-fxe"/>
-                            <constraint firstItem="llw-gg-loL" firstAttribute="leading" secondItem="ocF-4p-Er2" secondAttribute="trailing" constant="13" id="pEK-gi-U2f"/>
+                            <constraint firstItem="zvj-ji-KD9" firstAttribute="leading" secondItem="qJ9-sk-I53" secondAttribute="leading" id="YCX-Z7-YME"/>
+                            <constraint firstItem="zvj-ji-KD9" firstAttribute="top" secondItem="ocF-4p-Er2" secondAttribute="bottom" constant="8" id="aYJ-5a-ltE"/>
+                            <constraint firstItem="G6C-nD-bdh" firstAttribute="leading" secondItem="ocF-4p-Er2" secondAttribute="trailing" constant="13" id="fQh-58-NiG"/>
+                            <constraint firstAttribute="trailing" secondItem="zvj-ji-KD9" secondAttribute="trailing" id="jrr-eK-olo"/>
+                            <constraint firstItem="G6C-nD-bdh" firstAttribute="top" secondItem="V5D-QT-NYG" secondAttribute="bottom" constant="20" id="kCg-Vh-KgJ"/>
+                            <constraint firstAttribute="trailing" secondItem="G6C-nD-bdh" secondAttribute="trailing" constant="46" id="u8f-OM-Ptu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Grocery List" id="q9a-TZ-CsD"/>
                     <connections>
-                        <outlet property="ingredient" destination="ocF-4p-Er2" id="OFt-NF-dGG"/>
                         <outlet property="ingredientTextField" destination="ocF-4p-Er2" id="mrN-4a-Orj"/>
                         <outlet property="tableView" destination="zvj-ji-KD9" id="Llv-G5-1MP"/>
                     </connections>

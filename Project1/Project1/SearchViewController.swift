@@ -30,8 +30,8 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-
+        
+        
     }
 
     override func didReceiveMemoryWarning()

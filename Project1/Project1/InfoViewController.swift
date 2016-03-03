@@ -135,6 +135,20 @@ extension InfoViewController
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        self.performSegueWithIdentifier("WebViewController", sender: nil)
+        if indexPath.section == 0 {
+            self.performSegueWithIdentifier("WebViewController", sender: nil)
+        } else if indexPath.section == 1 {
+            let popup = UIAlertController(title: "Add to Grocery List", message: "Would you like to add this to your grocery list?", preferredStyle: .Alert)
+            let confirmAction = UIAlertAction(title: "Yes", style: .Default, handler: { (action) -> Void in
+                guard let object = self.matches?.ingredients[indexPath.row] else { return }
+                let ingredient = Grocery(groceryItem: object)
+                GroceryMemory.shared.add(ingredient)
+            })
+            let cancelAction = UIAlertAction(title: "No", style: .Default, handler: nil)
+            popup.addAction(confirmAction)
+            popup.addAction(cancelAction)
+            self.presentViewController(popup, animated: true, completion: nil)
+        }
+       
     }
 }
