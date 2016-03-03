@@ -20,7 +20,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u6T-24-p9a">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gsw-rr-d2C">
                                     <size key="itemSize" width="412.5" height="223"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -266,26 +266,49 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wcU-PO-TFh">
                                                     <rect key="frame" x="0.0" y="0.0" width="185" height="155"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upv-Hm-DiJ">
-                                                    <rect key="frame" x="17" y="96" width="150" height="51"/>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGe-w3-RNL">
+                                                    <rect key="frame" x="8" y="96" width="165" height="51"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upv-Hm-DiJ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="165" height="51"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="165" id="B2A-qC-oXf"/>
+                                                                <constraint firstAttribute="height" constant="51" id="oMf-92-4Ra"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="51" id="oMf-92-4Ra"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Upv-Hm-DiJ" secondAttribute="trailing" id="2Qy-Vm-OD4"/>
+                                                        <constraint firstItem="Upv-Hm-DiJ" firstAttribute="top" secondItem="UGe-w3-RNL" secondAttribute="top" id="95W-5E-HsW"/>
+                                                        <constraint firstItem="Upv-Hm-DiJ" firstAttribute="top" secondItem="UGe-w3-RNL" secondAttribute="top" id="IKV-lY-Pca"/>
+                                                        <constraint firstItem="Upv-Hm-DiJ" firstAttribute="leading" secondItem="UGe-w3-RNL" secondAttribute="leading" id="K2U-C8-hr5"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Upv-Hm-DiJ" secondAttribute="bottom" id="L8h-Zl-ajo"/>
+                                                        <constraint firstItem="Upv-Hm-DiJ" firstAttribute="leading" secondItem="UGe-w3-RNL" secondAttribute="leading" id="QuG-dm-9pO"/>
+                                                        <constraint firstItem="Upv-Hm-DiJ" firstAttribute="leading" secondItem="UGe-w3-RNL" secondAttribute="leading" id="Vlb-qv-oE9"/>
+                                                        <constraint firstItem="Upv-Hm-DiJ" firstAttribute="top" secondItem="UGe-w3-RNL" secondAttribute="top" id="XUp-nj-N6Z"/>
+                                                        <constraint firstItem="Upv-Hm-DiJ" firstAttribute="top" secondItem="UGe-w3-RNL" secondAttribute="top" id="YZn-2N-pyL"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Upv-Hm-DiJ" secondAttribute="bottom" id="ZjO-mB-eAQ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Upv-Hm-DiJ" secondAttribute="trailing" id="arJ-PI-iIL"/>
+                                                        <constraint firstItem="Upv-Hm-DiJ" firstAttribute="centerX" secondItem="UGe-w3-RNL" secondAttribute="centerX" id="eTh-xA-cK6"/>
+                                                        <constraint firstItem="Upv-Hm-DiJ" firstAttribute="leading" secondItem="UGe-w3-RNL" secondAttribute="leading" id="jdr-SI-s46"/>
+                                                        <constraint firstItem="Upv-Hm-DiJ" firstAttribute="centerY" secondItem="UGe-w3-RNL" secondAttribute="centerY" id="nWD-gJ-EDW"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Upv-Hm-DiJ" firstAttribute="centerX" secondItem="wcU-PO-TFh" secondAttribute="centerX" id="Gnw-Cy-2zo"/>
-                                            <constraint firstItem="Upv-Hm-DiJ" firstAttribute="bottom" secondItem="rh6-O1-1Sd" secondAttribute="bottomMargin" id="Ipw-RQ-4yQ"/>
                                             <constraint firstItem="wcU-PO-TFh" firstAttribute="top" secondItem="rh6-O1-1Sd" secondAttribute="top" id="MvQ-a9-HZZ"/>
+                                            <constraint firstItem="UGe-w3-RNL" firstAttribute="leading" secondItem="rh6-O1-1Sd" secondAttribute="leadingMargin" id="YTa-7P-F44"/>
                                             <constraint firstItem="wcU-PO-TFh" firstAttribute="leading" secondItem="rh6-O1-1Sd" secondAttribute="leading" id="bRz-mj-Z21"/>
                                             <constraint firstAttribute="trailing" secondItem="wcU-PO-TFh" secondAttribute="trailing" id="ewq-N5-gN6"/>
                                             <constraint firstAttribute="bottom" secondItem="wcU-PO-TFh" secondAttribute="bottom" id="fG6-0M-T25"/>
-                                            <constraint firstItem="Upv-Hm-DiJ" firstAttribute="leading" secondItem="rh6-O1-1Sd" secondAttribute="leadingMargin" constant="9" id="sKe-ae-847"/>
+                                            <constraint firstItem="UGe-w3-RNL" firstAttribute="bottom" secondItem="rh6-O1-1Sd" secondAttribute="bottomMargin" id="irl-h4-QmI"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="wcU-PO-TFh" id="hPk-yE-Ehu"/>

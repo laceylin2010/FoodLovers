@@ -31,6 +31,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     {
         super.viewDidLoad()
         self.collectionView.collectionViewLayout = SearchCollectionFlowLayout()
+     
         
     }
 

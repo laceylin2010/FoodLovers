@@ -32,7 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AF0A66081C80C4A20008E41B /* Project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF0A66081C80C4A20008E41B /* FoodLover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodLover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0A660B1C80C4A20008E41B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF0A660D1C80C4A20008E41B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AF0A66101C80C4A20008E41B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		AF0A66091C80C4A20008E41B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF0A66081C80C4A20008E41B /* Project1.app */,
+				AF0A66081C80C4A20008E41B /* FoodLover.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,9 +160,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF0A66071C80C4A20008E41B /* Project1 */ = {
+		AF0A66071C80C4A20008E41B /* FoodLover */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF0A661A1C80C4A20008E41B /* Build configuration list for PBXNativeTarget "Project1" */;
+			buildConfigurationList = AF0A661A1C80C4A20008E41B /* Build configuration list for PBXNativeTarget "FoodLover" */;
 			buildPhases = (
 				AF0A66041C80C4A20008E41B /* Sources */,
 				AF0A66051C80C4A20008E41B /* Frameworks */,
@@ -172,9 +172,9 @@
 			);
 			dependencies = (
 			);
-			name = Project1;
+			name = FoodLover;
 			productName = Project1;
-			productReference = AF0A66081C80C4A20008E41B /* Project1.app */;
+			productReference = AF0A66081C80C4A20008E41B /* FoodLover.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -205,7 +205,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF0A66071C80C4A20008E41B /* Project1 */,
+				AF0A66071C80C4A20008E41B /* FoodLover */,
 			);
 		};
 /* End PBXProject section */
@@ -361,7 +361,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Project1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laceyvu.Project1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laceyvu.FoodLover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -372,7 +372,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Project1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.laceyvu.Project1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.laceyvu.FoodLover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -389,7 +389,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF0A661A1C80C4A20008E41B /* Build configuration list for PBXNativeTarget "Project1" */ = {
+		AF0A661A1C80C4A20008E41B /* Build configuration list for PBXNativeTarget "FoodLover" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AF0A661B1C80C4A20008E41B /* Debug */,
