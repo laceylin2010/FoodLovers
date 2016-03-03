@@ -30,8 +30,6 @@ class SearchCollectionFlowLayout: UICollectionViewFlowLayout
     {
         self.minimumLineSpacing = self.spacing
         self.minimumInteritemSpacing = self.spacing
-        
-        
         self.sectionInset = UIEdgeInsets(top: 2, left: 0.5, bottom: 2, right: 0.5)
         self.itemSize = CGSize(width: self.itemWidth(), height: self.itemWidth())
         
