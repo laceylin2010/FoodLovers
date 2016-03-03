@@ -9,7 +9,7 @@
         <!--FoodLovers-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="HomeViewController" customModule="FoodLover" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecipeCollectionViewCell" id="Pl2-Qg-sbC" customClass="RecipeCollectionViewCell" customModule="Project1" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecipeCollectionViewCell" id="Pl2-Qg-sbC" customClass="RecipeCollectionViewCell" customModule="FoodLover" customModuleProvider="target">
                                         <rect key="frame" x="94" y="0.0" width="412.5" height="223"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -80,7 +80,7 @@
         <!--Info View Controller-->
         <scene sceneID="IMI-qR-4fa">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="1yZ-oH-hWu" customClass="InfoViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="1yZ-oH-hWu" customClass="InfoViewController" customModule="FoodLover" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="age-gz-0bh"/>
                         <viewControllerLayoutGuide type="bottom" id="clx-we-ywF"/>
@@ -97,7 +97,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="75" id="xoY-mI-ATY" customClass="InfoTableViewCell" customModule="Project1" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="75" id="xoY-mI-ATY" customClass="InfoTableViewCell" customModule="FoodLover" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="325.5" width="600" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xoY-mI-ATY" id="Ng6-K3-0GX">
@@ -191,7 +191,7 @@
         <!--Web View Controller-->
         <scene sceneID="uyf-j3-2gK">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8dl-Iv-usR" customClass="WebViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8dl-Iv-usR" customClass="WebViewController" customModule="FoodLover" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HLq-ip-4Sx"/>
                         <viewControllerLayoutGuide type="bottom" id="MUN-LU-Rly"/>
@@ -230,7 +230,7 @@
         <!--Search-->
         <scene sceneID="1Dp-f3-7uQ">
             <objects>
-                <viewController id="RWH-e1-YV6" customClass="SearchViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RWH-e1-YV6" customClass="SearchViewController" customModule="FoodLover" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W5H-cr-FyX"/>
                         <viewControllerLayoutGuide type="bottom" id="kFn-1A-EMZ"/>
@@ -256,7 +256,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchCell" id="rh6-O1-1Sd" customClass="SearchViewCell" customModule="Project1" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchCell" id="rh6-O1-1Sd" customClass="SearchViewCell" customModule="FoodLover" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="185" height="155"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -280,7 +280,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="Upv-Hm-DiJ" secondAttribute="trailing" id="2Qy-Vm-OD4"/>
@@ -347,7 +347,7 @@
         <!--Grocery List-->
         <scene sceneID="M3B-4X-cmb">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="7fE-Di-Xom" customClass="GroceryViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="7fE-Di-Xom" customClass="GroceryViewController" customModule="FoodLover" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V5D-QT-NYG"/>
                         <viewControllerLayoutGuide type="bottom" id="s4W-wV-wk6"/>
@@ -487,6 +487,6 @@
         <image name="Search-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rTl-DB-lhn"/>
+        <segue reference="VVz-mv-HWv"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -32,7 +32,6 @@ class SearchCollectionFlowLayout: UICollectionViewFlowLayout
         self.minimumInteritemSpacing = self.spacing
         self.sectionInset = UIEdgeInsets(top: 2, left: 0.5, bottom: 2, right: 0.5)
         self.itemSize = CGSize(width: self.itemWidth(), height: self.itemWidth())
-        
     }
     
     func screenWidth() -> CGFloat
@@ -46,6 +45,7 @@ class SearchCollectionFlowLayout: UICollectionViewFlowLayout
         let availableWidth = width - (CGFloat(self.columns) * self.spacing)
         return availableWidth / CGFloat(self.columns)
     }
+    
     
     
 }

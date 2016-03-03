@@ -77,6 +77,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         self.performSegueWithIdentifier("InfoViewController", sender: nil)
     }
     
+    func scrollViewDidScroll(scrollView: UIScrollView)
+    {
+        guard let collectionView = self.collectionView else {return}
+        guard let visibleCells = collectionView.visibleCells() as? [RecipeCollectionViewCell] else { return }
+        for parallaxCell in visibleCells {
+            let yOffset = ((collectionView.contentOffset.y - parallaxCell.frame.origin.y) / ImageHeight) * OffsetSpeed
+            parallaxCell.offset(CGPointMake(0.0, yOffset))
+        }
+    }
     
 }
 

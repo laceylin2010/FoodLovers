@@ -8,6 +8,10 @@
 
 import UIKit
 
+
+let ImageHeight: CGFloat = 200.0
+let OffsetSpeed: CGFloat = 25.0
+
 class RecipeCollectionViewCell: UICollectionViewCell, Identity
 {
     
@@ -18,6 +22,7 @@ class RecipeCollectionViewCell: UICollectionViewCell, Identity
             imageAppear()
         }
     }
+    
     
     class func id() -> String
     {
@@ -39,6 +44,10 @@ class RecipeCollectionViewCell: UICollectionViewCell, Identity
     {
         super.prepareForReuse()
         self.imageView.image = nil
+    }
+    
+    func offset(offset: CGPoint) {
+        imageView.frame = CGRectOffset(self.imageView.bounds, offset.x, offset.y)
     }
 
 }
