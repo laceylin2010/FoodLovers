@@ -365,30 +365,30 @@
                                     <outlet property="delegate" destination="7fE-Di-Xom" id="Lm4-E2-hsl"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ocF-4p-Er2">
+                                <rect key="frame" x="20" y="85" width="522" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6C-nD-bdh">
-                                <rect key="frame" x="524" y="84" width="30" height="30"/>
+                                <rect key="frame" x="550" y="84" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addButton:" destination="7fE-Di-Xom" eventType="touchUpInside" id="IGD-qX-sOI"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ocF-4p-Er2">
-                                <rect key="frame" x="39" y="85" width="472" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ocF-4p-Er2" firstAttribute="leading" secondItem="qJ9-sk-I53" secondAttribute="leading" constant="39" id="BOW-D2-n6i"/>
+                            <constraint firstItem="ocF-4p-Er2" firstAttribute="leading" secondItem="qJ9-sk-I53" secondAttribute="leading" constant="20" id="BOW-D2-n6i"/>
                             <constraint firstItem="s4W-wV-wk6" firstAttribute="top" secondItem="zvj-ji-KD9" secondAttribute="bottom" id="Sgq-iT-Jvs"/>
                             <constraint firstItem="ocF-4p-Er2" firstAttribute="top" secondItem="V5D-QT-NYG" secondAttribute="bottom" constant="21" id="Wxm-yt-mEh"/>
                             <constraint firstItem="zvj-ji-KD9" firstAttribute="leading" secondItem="qJ9-sk-I53" secondAttribute="leading" id="YCX-Z7-YME"/>
                             <constraint firstItem="zvj-ji-KD9" firstAttribute="top" secondItem="ocF-4p-Er2" secondAttribute="bottom" constant="8" id="aYJ-5a-ltE"/>
-                            <constraint firstItem="G6C-nD-bdh" firstAttribute="leading" secondItem="ocF-4p-Er2" secondAttribute="trailing" constant="13" id="fQh-58-NiG"/>
+                            <constraint firstItem="G6C-nD-bdh" firstAttribute="leading" secondItem="ocF-4p-Er2" secondAttribute="trailing" constant="8" id="fQh-58-NiG"/>
                             <constraint firstAttribute="trailing" secondItem="zvj-ji-KD9" secondAttribute="trailing" id="jrr-eK-olo"/>
                             <constraint firstItem="G6C-nD-bdh" firstAttribute="top" secondItem="V5D-QT-NYG" secondAttribute="bottom" constant="20" id="kCg-Vh-KgJ"/>
-                            <constraint firstAttribute="trailing" secondItem="G6C-nD-bdh" secondAttribute="trailing" constant="46" id="u8f-OM-Ptu"/>
+                            <constraint firstAttribute="trailing" secondItem="G6C-nD-bdh" secondAttribute="trailing" constant="20" id="u8f-OM-Ptu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Grocery List" id="q9a-TZ-CsD"/>
