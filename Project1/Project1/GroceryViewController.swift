@@ -13,8 +13,6 @@ class GroceryViewController: UIViewController, Identity, UITableViewDelegate, UI
     @IBOutlet weak var ingredientTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
-    
-    
     class func id() -> String
     {
         return "GroceryViewController"
@@ -58,6 +56,7 @@ class GroceryViewController: UIViewController, Identity, UITableViewDelegate, UI
         return GroceryMemory.shared.count()
     }
     
+    
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
     {
         if editingStyle == .Delete{
@@ -74,6 +73,12 @@ class GroceryViewController: UIViewController, Identity, UITableViewDelegate, UI
         return true
     }
     
+    func scrollViewDidScroll(scrollView: UIScrollView)
+    {
+        if self.ingredientTextField.isFirstResponder(){
+            self.ingredientTextField.resignFirstResponder()
+        }
+    }
 
 
 }
