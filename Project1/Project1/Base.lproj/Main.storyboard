@@ -96,11 +96,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="276"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="Nse-6h-faU">
-                                    <rect key="frame" x="0.0" y="494.5" width="600" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </view>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="75" id="xoY-mI-ATY" customClass="InfoTableViewCell" customModule="Project1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="325.5" width="600" height="75"/>
