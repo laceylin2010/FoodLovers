@@ -30,6 +30,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.collectionView.collectionViewLayout = SearchCollectionFlowLayout()
         
         
     }

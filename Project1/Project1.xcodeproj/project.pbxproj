@@ -28,6 +28,7 @@
 		AF0A66561C8667790008E41B /* Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66551C8667790008E41B /* Additions.swift */; };
 		AF0A66581C8668FB0008E41B /* GroceryMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A66571C8668FB0008E41B /* GroceryMemory.swift */; };
 		AF66A3BB1C8751B900EAAD9A /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66A3BA1C8751B900EAAD9A /* InfoTableViewCell.swift */; };
+		AFFBBD0D1C88C17800958A3D /* SearchCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFBBD0C1C88C17800958A3D /* SearchCollectionFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		AF0A66551C8667790008E41B /* Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Additions.swift; sourceTree = "<group>"; };
 		AF0A66571C8668FB0008E41B /* GroceryMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryMemory.swift; sourceTree = "<group>"; };
 		AF66A3BA1C8751B900EAAD9A /* InfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		AFFBBD0C1C88C17800958A3D /* SearchCollectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		AF0A661E1C80C62E0008E41B /* VIew */ = {
 			isa = PBXGroup;
 			children = (
+				AFFBBD0C1C88C17800958A3D /* SearchCollectionFlowLayout.swift */,
 				AF0A664B1C8632CB0008E41B /* SearchRecipeCell.swift */,
 				AF0A663B1C817C030008E41B /* RecipeCollectionViewCell.swift */,
 				AF0A66411C84E0EF0008E41B /* IngredientTableViewCell.swift */,
@@ -234,6 +237,7 @@
 				AF0A66421C84E0EF0008E41B /* IngredientTableViewCell.swift in Sources */,
 				AF0A66541C8662A80008E41B /* Grocery.swift in Sources */,
 				AF0A66401C84DBB00008E41B /* InfoViewController.swift in Sources */,
+				AFFBBD0D1C88C17800958A3D /* SearchCollectionFlowLayout.swift in Sources */,
 				AF0A66441C84EDB60008E41B /* SearchViewController.swift in Sources */,
 				AF0A662F1C80F8F10008E41B /* ModelAdditions.swift in Sources */,
 				AF0A664E1C86620A0008E41B /* GroceryTask.swift in Sources */,

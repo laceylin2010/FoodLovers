@@ -211,11 +211,13 @@
             </objects>
             <point key="canvasLocation" x="3344" y="-346"/>
         </scene>
-        <!--Home-->
+        <!--Navigation Controller-->
         <scene sceneID="PlF-9E-cuO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o5L-KR-Q2H" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="Add Rule-50" id="i9k-Kv-crl"/>
+                    <tabBarItem key="tabBarItem" title="" image="Home-50" selectedImage="Home-50" id="i9k-Kv-crl">
+                        <inset key="imageInsets" minX="0.0" minY="15" maxX="15" maxY="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fnC-YV-7o3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -249,7 +251,7 @@
                                     <outlet property="delegate" destination="RWH-e1-YV6" id="Kuq-qE-EXN"/>
                                 </connections>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KHd-O9-hKd">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KHd-O9-hKd">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8vR-yd-Yjb">
@@ -270,9 +272,9 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="185" height="155"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upv-Hm-DiJ">
-                                                    <rect key="frame" x="17" y="117" width="150" height="30"/>
+                                                    <rect key="frame" x="17" y="96" width="150" height="51"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="oMf-92-4Ra"/>
+                                                        <constraint firstAttribute="height" constant="51" id="oMf-92-4Ra"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -305,8 +307,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nCD-M7-Qfm" secondAttribute="trailing" id="0tQ-Eu-6ch"/>
+                            <constraint firstAttribute="bottom" secondItem="KHd-O9-hKd" secondAttribute="bottom" id="4tV-En-oKi"/>
                             <constraint firstItem="nCD-M7-Qfm" firstAttribute="top" secondItem="W5H-cr-FyX" secondAttribute="bottom" id="8C6-wv-AHo"/>
                             <constraint firstItem="nCD-M7-Qfm" firstAttribute="leading" secondItem="gRp-ns-fH8" secondAttribute="leading" id="Myd-Ta-uZa"/>
+                            <constraint firstItem="KHd-O9-hKd" firstAttribute="trailing" secondItem="nCD-M7-Qfm" secondAttribute="trailing" id="onI-BR-cct"/>
+                            <constraint firstItem="KHd-O9-hKd" firstAttribute="leading" secondItem="nCD-M7-Qfm" secondAttribute="leading" id="ovU-fU-Z4Q"/>
+                            <constraint firstItem="KHd-O9-hKd" firstAttribute="top" secondItem="nCD-M7-Qfm" secondAttribute="bottom" id="y3U-I8-TN5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="dW2-E7-i7J"/>
@@ -323,7 +329,7 @@
         <!--Grocery List-->
         <scene sceneID="M3B-4X-cmb">
             <objects>
-                <viewController id="7fE-Di-Xom" customClass="GroceryViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="7fE-Di-Xom" customClass="GroceryViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V5D-QT-NYG"/>
                         <viewControllerLayoutGuide type="bottom" id="s4W-wV-wk6"/>
@@ -337,7 +343,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" textLabel="MZm-m0-QTG" rowHeight="32" style="IBUITableViewCellStyleDefault" id="V0a-7U-Jox">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="32"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="32"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V0a-7U-Jox" id="ps3-j8-IwU">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="31.5"/>
@@ -418,7 +424,9 @@
         <scene sceneID="DoH-jA-nbD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yFR-HY-f0B" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="9ys-9V-1M1"/>
+                    <tabBarItem key="tabBarItem" image="Search-50" selectedImage="Search-50" id="9ys-9V-1M1">
+                        <inset key="imageInsets" minX="0.0" minY="15" maxX="15" maxY="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lo9-zS-efb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -433,12 +441,12 @@
             </objects>
             <point key="canvasLocation" x="371" y="427"/>
         </scene>
-        <!--Grocery List-->
+        <!--Navigation Controller-->
         <scene sceneID="XrJ-bu-Jxg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A5y-en-xgj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Grocery List" image="Add Rule-50" id="l1r-H7-W3v">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    <tabBarItem key="tabBarItem" image="Report Card-50" selectedImage="Report Card-50" id="l1r-H7-W3v">
+                        <inset key="imageInsets" minX="0.0" minY="15" maxX="15" maxY="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OcK-Qm-zKs">
@@ -456,7 +464,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Add Rule-50" width="50" height="50"/>
+        <image name="Home-50" width="50" height="50"/>
+        <image name="Report Card-50" width="50" height="50"/>
+        <image name="Search-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VVz-mv-HWv"/>
