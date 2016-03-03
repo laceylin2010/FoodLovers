@@ -9,7 +9,7 @@
 import UIKit
 
 
-let ImageHeight: CGFloat = 200.0
+let ImageHeight: CGFloat = 200.0 
 let OffsetSpeed: CGFloat = 25.0
 
 class RecipeCollectionViewCell: UICollectionViewCell, Identity

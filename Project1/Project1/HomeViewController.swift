@@ -31,7 +31,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     {
         super.viewDidLoad()
         loadRecipeImages()
-        self.collectionView.collectionViewLayout = SearchCollectionFlowLayout(columns: 1)
+        self.collectionView.collectionViewLayout = SearchCollectionFlowLayout(columns: 1, imageHeghtMultiplier: 0.7)
 
     }
 
@@ -82,7 +82,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         guard let collectionView = self.collectionView else {return}
         guard let visibleCells = collectionView.visibleCells() as? [RecipeCollectionViewCell] else { return }
         for parallaxCell in visibleCells {
-            let yOffset = ((collectionView.contentOffset.y - parallaxCell.frame.origin.y) / ImageHeight) * OffsetSpeed
+            let yOffset = ((collectionView.contentOffset.y - parallaxCell.frame.origin.y) / ImageHeight * 0.5) * OffsetSpeed
             parallaxCell.offset(CGPointMake(0.0, yOffset))
         }
     }
