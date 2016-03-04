@@ -31,8 +31,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     {
         super.viewDidLoad()
         self.collectionView.collectionViewLayout = SearchCollectionFlowLayout()
-     
-        
+
     }
     
 
@@ -47,7 +46,8 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         let reuseCell = self.collectionView.dequeueReusableCellWithReuseIdentifier("searchCell", forIndexPath: indexPath) as! SearchViewCell
         let searchRecipe = self.dataSource[indexPath.row]
         reuseCell.matches = searchRecipe
-        
+
+
         return reuseCell
     }
 

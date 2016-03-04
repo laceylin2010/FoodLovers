@@ -269,7 +269,7 @@
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGe-w3-RNL">
                                                     <rect key="frame" x="8" y="96" width="165" height="51"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upv-Hm-DiJ">
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upv-Hm-DiJ">
                                                             <rect key="frame" x="0.0" y="0.0" width="165" height="51"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="165" id="B2A-qC-oXf"/>
@@ -487,6 +487,6 @@
         <image name="Search-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rTl-DB-lhn"/>
+        <segue reference="VVz-mv-HWv"/>
     </inferredMetricsTieBreakers>
 </document>

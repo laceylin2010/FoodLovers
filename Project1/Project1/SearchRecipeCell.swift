@@ -52,6 +52,8 @@ class SearchViewCell: UICollectionViewCell, Identity
         super.prepareForReuse()
         self.imageView.image = nil
     }
+    
+    
 
     
 }
