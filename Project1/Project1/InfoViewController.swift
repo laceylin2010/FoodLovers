@@ -30,6 +30,8 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        
     }
 
     override func viewDidLoad()
@@ -143,6 +145,7 @@ extension InfoViewController
                 guard let object = self.matches?.ingredients[indexPath.row] else { return }
                 let ingredient = Grocery(groceryItem: object)
                 GroceryMemory.shared.add(ingredient)
+
             })
             let cancelAction = UIAlertAction(title: "No", style: .Default, handler: nil)
             popup.addAction(confirmAction)

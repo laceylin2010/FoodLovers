@@ -21,7 +21,14 @@ class GroceryViewController: UIViewController, Identity, UITableViewDelegate, UI
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
 
+    }
+    
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning()
@@ -37,7 +44,6 @@ class GroceryViewController: UIViewController, Identity, UITableViewDelegate, UI
         let newGroceryItem = Grocery(groceryItem: title)
         GroceryMemory.shared.add(newGroceryItem)
         self.tableView.reloadData()
-
     }
 
     
