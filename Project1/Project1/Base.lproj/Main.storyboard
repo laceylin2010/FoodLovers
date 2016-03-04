@@ -36,7 +36,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Kz-5N-7wu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="412.5" height="223"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="412.5" height="253"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -45,7 +45,7 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="0Kz-5N-7wu" secondAttribute="trailing" id="Ogp-Im-3Rl"/>
                                             <constraint firstItem="0Kz-5N-7wu" firstAttribute="leading" secondItem="Pl2-Qg-sbC" secondAttribute="leading" id="POn-pv-u9w"/>
-                                            <constraint firstAttribute="bottom" secondItem="0Kz-5N-7wu" secondAttribute="bottom" id="TXV-Sl-Mzr"/>
+                                            <constraint firstAttribute="bottom" secondItem="0Kz-5N-7wu" secondAttribute="bottom" constant="-30" id="TXV-Sl-Mzr"/>
                                             <constraint firstItem="0Kz-5N-7wu" firstAttribute="top" secondItem="Pl2-Qg-sbC" secondAttribute="top" id="vPr-Ci-4fa"/>
                                         </constraints>
                                         <connections>
@@ -487,6 +487,6 @@
         <image name="Search-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VVz-mv-HWv"/>
+        <segue reference="rTl-DB-lhn"/>
     </inferredMetricsTieBreakers>
 </document>

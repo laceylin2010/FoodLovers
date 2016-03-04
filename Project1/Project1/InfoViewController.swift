@@ -30,6 +30,7 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+     
         
         
     }

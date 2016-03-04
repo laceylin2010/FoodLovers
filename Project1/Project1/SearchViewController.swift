@@ -34,6 +34,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
      
         
     }
+    
 
     override func didReceiveMemoryWarning()
     {
