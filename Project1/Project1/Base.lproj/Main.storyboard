@@ -206,13 +206,11 @@
             </objects>
             <point key="canvasLocation" x="3344" y="-346"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Home-->
         <scene sceneID="PlF-9E-cuO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o5L-KR-Q2H" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Home-50" selectedImage="Home-50" id="i9k-Kv-crl">
-                        <inset key="imageInsets" minX="0.0" minY="15" maxX="15" maxY="0.0"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home.png" selectedImage="Home.png" id="i9k-Kv-crl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fnC-YV-7o3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -438,13 +436,11 @@
             </objects>
             <point key="canvasLocation" x="371" y="-355"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Search Recipes-->
         <scene sceneID="DoH-jA-nbD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yFR-HY-f0B" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="Search-50" selectedImage="Search-50" id="9ys-9V-1M1">
-                        <inset key="imageInsets" minX="0.0" minY="15" maxX="15" maxY="0.0"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Search Recipes" image="Search.png" selectedImage="Search.png" id="9ys-9V-1M1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lo9-zS-efb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -459,13 +455,11 @@
             </objects>
             <point key="canvasLocation" x="371" y="427"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Grocery List-->
         <scene sceneID="XrJ-bu-Jxg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A5y-en-xgj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="Report Card-50" selectedImage="Report Card-50" id="l1r-H7-W3v">
-                        <inset key="imageInsets" minX="0.0" minY="15" maxX="15" maxY="0.0"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Grocery List" image="Edit.png" selectedImage="Edit.png" id="l1r-H7-W3v"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OcK-Qm-zKs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -482,9 +476,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Home-50" width="50" height="50"/>
-        <image name="Report Card-50" width="50" height="50"/>
-        <image name="Search-50" width="50" height="50"/>
+        <image name="Edit.png" width="30" height="30"/>
+        <image name="Home.png" width="30" height="30"/>
+        <image name="Search.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VVz-mv-HWv"/>
