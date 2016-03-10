@@ -34,9 +34,7 @@ class RecipeCollectionViewCell: UICollectionViewCell, Identity
         if let matches =  matches{
             API.shared.getImage(matches.recipeImage, completion: { (image) -> () in
                 self.imageView.image = image
-                
             })
-            
         }
     }
     

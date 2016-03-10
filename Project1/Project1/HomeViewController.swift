@@ -105,6 +105,7 @@ extension HomeViewController
             if let infoViewController = segue.destinationViewController as? InfoViewController{
                     infoViewController.matches = sender as! Matches
                 } else {
+                print("Segue is not grabbing the data needed")
             }
         }
     }

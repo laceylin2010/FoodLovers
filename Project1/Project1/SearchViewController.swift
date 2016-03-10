@@ -59,7 +59,14 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
-        self.performSegueWithIdentifier("InfoViewController", sender: nil)
+        let matches = self.dataSource[indexPath.row]
+        
+        Matches.updateRecipe(matches) { (success, updateRecipeResult) -> () in
+            if success {
+                self.performSegueWithIdentifier("InfoViewController", sender: updateRecipeResult)
+            }
+        }
+        
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar)
@@ -86,11 +93,11 @@ extension SearchViewController
     {
         if segue.identifier == InfoViewController.id(){
             if let infoViewController = segue.destinationViewController as? InfoViewController{
-                if let indexPath = self.collectionView.indexPathsForSelectedItems()?.first{
-                    let matches = self.dataSource[indexPath.row]
-                    infoViewController.matches = matches
-                }
+                    infoViewController.matches = sender as! Matches
+            } else {
+                print("Not getting the correct Data")
             }
         }
     }
 }
+
