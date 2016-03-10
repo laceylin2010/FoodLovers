@@ -17,10 +17,10 @@ class API
     
     let yKeyId = "958f46cf"
     let yKeyAuth = "6b22afe2cbf567bfc13b17095c17152b"
-    let yUrlStringForSearch = "http://api.yummly.com/v1/api/recipes?"// THIS
+    let yUrlStringForSearch = "http://api.yummly.com/v1/api/recipes?"
     let yEmptyString = ""
     
-//    let gUrlStringForSearch = "http://api.yummly.com/v1/api/recipe/recipe-id?" //additionally added
+    let gUrlStringForSearch = "http://api.yummly.com/v1/api/recipe/"
 
     
     func searchRecipes(searchTerm:String?, maxResults: Int? = 20, completion: APICompletionHandler)
@@ -44,16 +44,20 @@ class API
         
     }
     
-//    func getRecipes(searchTerm: String?, maxResult: Int? = 20, completion: APICompletionHandler)
-//    {
-//        
-//        if let searchTerm = searchTerm {
-//            let
-//        }
-//        
-//        
-//    }
-
+    func getRecipe(id: String, completion: APICompletionHandler)
+    {
+        let recipeUrlString = "\(gUrlStringForSearch)\(id)?_app_id=\(yKeyId)&_app_key=\(yKeyAuth)"
+        
+        self.fetchRequestWithUrlString(recipeUrlString) { (success, json) -> () in
+            if success {
+                completion(success: success, json: json)
+               
+            }
+        }
+        
+    
+    }
+    
     
     func fetchRequestWithUrlString(urlString: String, completion: APICompletionHandler)
     {

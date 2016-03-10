@@ -18,9 +18,9 @@ extension Matches
             let eachRecipe = json
 
             
-            guard let attributions = eachRecipe["attribution"] as? [String : AnyObject] else { return }
+//            guard let attributions = eachRecipe["attribution"] as? [String : AnyObject] else { return }
             
-            let foodURL = attributions["url"] as? String ?? API.shared.yEmptyString
+//            let foodURL = attributions["url"] as? String ?? API.shared.yEmptyString
             
             guard let allRecipes = eachRecipe["matches"] as? [[String: AnyObject]] else { return }
             
@@ -29,12 +29,12 @@ extension Matches
             let rating = recipe["rating"] as? Int ?? 0
             let id = recipe["id"] as? String ?? API.shared.yEmptyString
             let recipeName = recipe["recipeName"] as? String ?? API.shared.yEmptyString
-            let ingredients = recipe["ingredients"] as? [String] ?? [] //COMING BACK EMPTY
-            let totalTime = recipe["totalTimeInSeconds"] as? Int ?? 0
+//            let ingredients = recipe["ingredients"] as? [String] ?? []
+//            let totalTime = recipe["totalTimeInSeconds"] as? Int ?? 0
             guard let imageurls = recipe["smallImageUrls"] as? [String] else { print("Not Recieving image..."); return }
             let recipeImage = imageurls.last ?? API.shared.yEmptyString
                 
-                let allMatches = Matches(rating: rating, recipeName: recipeName, ingredients: ingredients, recipeImage: recipeImage, totalTime: totalTime, url: foodURL, id: id)
+            let allMatches = Matches(rating: rating, recipeName: recipeName, ingredients: nil, recipeImage: recipeImage, totalTime: nil, url: nil, id: id)
             
             
             matches.append(allMatches)
@@ -47,4 +47,26 @@ extension Matches
         
     }
     
+    class func updateRecipe(recipe: Matches, completion: (success: Bool, updateRecipeResult: Matches) -> ())
+    {
+        
+        API.shared.getRecipe(recipe.id) { (success, json) -> () in
+            
+            
+            let currentRecipe = json
+            
+            guard let source = currentRecipe["source"] as? [String : AnyObject] else { return }
+            let url = source["sourceRecipeUrl"] as? String ?? API.shared.yEmptyString
+            
+            let ingredients = currentRecipe["ingredientLines"] as? [String] ?? []
+            let totalTime = currentRecipe["totalTime"] as? Int ?? 0
+            
+            recipe.ingredients = ingredients
+            recipe.totalTime = totalTime
+            recipe.url = url
+            
+            NSOperationQueue.mainQueue().addOperationWithBlock { completion(success: true, updateRecipeResult: recipe)
+            }
+        }
+    }
 }

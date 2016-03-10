@@ -32,7 +32,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         super.viewDidLoad()
         loadRecipeImages()
         self.collectionView.collectionViewLayout = SearchCollectionFlowLayout(columns: 1, imageHeghtMultiplier: 0.7)
-//        self.navigationController?.navigationBar.backgroundColor = UIColor
 
     }
 

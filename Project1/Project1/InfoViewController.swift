@@ -14,39 +14,51 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
 
-    var matches: Matches?
+    var matches: Matches!
     
-    var dataSource = [Matches](){
-        didSet{
-            self.tableView.reloadData()
-        }
-    }
 
     class func id() -> String
     {
         return "InfoViewController"
     }
-    
-    override func viewWillAppear(animated: Bool)
-    {
-        super.viewWillAppear(animated)
-    }
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.navigationItem.title = matches?.recipeName
+        self.navigationItem.title = matches.recipeName
         setupRecipe()
+       
 
     }
 
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        updatingRecipeInfo()
+    }
+    
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
         
     }
 
-
+    func updatingRecipeInfo()
+    {
+        print(matches.id)
+        print(matches.ingredients)
+        
+        Matches.updateRecipe(matches) { (success, updateRecipeResult) -> () in
+            if success{
+                self.matches = updateRecipeResult
+                print(self.matches.id)
+                print(self.matches.ingredients)
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
         return 2
@@ -59,9 +71,9 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
         if section == 0 {
             numberOfRows = 1
         } else {
-            if let matches = self.matches{
-               numberOfRows = matches.ingredients.count
-            }
+            guard let ingredients = matches.ingredients else { return 0 }
+
+            numberOfRows = ingredients.count
         }
         
         return numberOfRows
@@ -85,15 +97,13 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     
         if indexPath.section ==  0 {
             if let cell = self.tableView.dequeueReusableCellWithIdentifier("infoCell", forIndexPath: indexPath) as? InfoTableViewCell{
-                if let matches = self.matches{
                     cell.matches = matches
                     cell.ratingLabel.text = "Rating: \(matches.rating)"
-                    cell.timeLabel.text = "Total Time: About \(matches.totalTimeInMinutes) Minutes"
-                }
+                    cell.timeLabel.text = "Total Time: About \(matches.totalTime) Minutes"
             }
         } else if indexPath.section == 1 {
             cell = self.tableView.dequeueReusableCellWithIdentifier("ingredientsCell", forIndexPath: indexPath)
-            cell.textLabel?.text = matches?.ingredients[indexPath.row]
+            cell.textLabel?.text = matches.ingredients![indexPath.row]
         }
         
         return cell
@@ -103,12 +113,9 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     
     func setupRecipe()
     {
-        if let match = matches{
-            API.shared.getImage(match.recipeImage, completion: { (image) -> () in
+            API.shared.getImage(matches.recipeImage, completion: { (image) -> () in
                 self.imageView.image = image
-
             })
-        }
         
     }
     
@@ -140,7 +147,7 @@ extension InfoViewController
         } else if indexPath.section == 1 {
             let popup = UIAlertController(title: "Add to Grocery List", message: "Would you like to add this to your grocery list?", preferredStyle: .Alert)
             let confirmAction = UIAlertAction(title: "Yes", style: .Default, handler: { (action) -> Void in
-                guard let object = self.matches?.ingredients[indexPath.row] else { return }
+                guard let object = self.matches.ingredients?[indexPath.row] else { return }
                 let ingredient = Grocery(groceryItem: object)
                 GroceryMemory.shared.add(ingredient)
 
@@ -156,12 +163,11 @@ extension InfoViewController
     
     @IBAction func addToFavorites(sender: UIButton)
     {
-        let popUp = UIAlertController(title: "Add to Favories", message: "Would you like to add this recipe to your favorites?", preferredStyle: .Alert)
-        let confirmAction = UIAlertAction(title: "Yes", style: .Default) { (action) -> Void in
-            guard let recipeName = self.matches?.recipeName else { return }
-//            let recipe =
-        }
-        
+//        let popUp = UIAlertController(title: "Add to Favories", message: "Would you like to add this recipe to your favorites?", preferredStyle: .Alert)
+//        let confirmAction = UIAlertAction(title: "Yes", style: .Default) { (action) -> Void in
+//            
+//        }
+//        
     }
 }
 

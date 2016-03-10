@@ -98,7 +98,7 @@
                                 </imageView>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="75" id="xoY-mI-ATY" customClass="InfoTableViewCell" customModule="FoodLover" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="325.5" width="600" height="75"/>
+                                        <rect key="frame" x="0.0" y="326" width="600" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xoY-mI-ATY" id="Ng6-K3-0GX">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
@@ -111,7 +111,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="239" verticalCompressionResistancePriority="751" text="Total Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yio-hb-RWj">
-                                                    <rect key="frame" x="8" y="29" width="55" height="15.5"/>
+                                                    <rect key="frame" x="8" y="28.5" width="55" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -123,26 +123,29 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIQ-OA-wgg">
-                                                    <rect key="frame" x="524" y="12" width="50" height="50"/>
+                                                    <rect key="frame" x="542" y="20" width="31" height="33"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="31" id="g9w-jd-yPz"/>
+                                                    </constraints>
                                                     <state key="normal" image="Heart.png"/>
                                                     <connections>
                                                         <action selector="addToFavorites:" destination="1yZ-oH-hWu" eventType="touchUpInside" id="v8h-j0-vB2"/>
-                                                        <segue destination="Zx1-1p-nRg" kind="show" identifier="FavoriteViewController" id="69o-46-FUs"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="oIQ-OA-wgg" firstAttribute="centerY" secondItem="Yio-hb-RWj" secondAttribute="centerY" id="5uf-58-VYc"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="iPt-cU-Ejl" secondAttribute="bottom" id="9cJ-8K-YVm"/>
                                                 <constraint firstItem="SDY-n2-cmb" firstAttribute="leading" secondItem="Ng6-K3-0GX" secondAttribute="leadingMargin" id="KP9-bq-8ze"/>
-                                                <constraint firstItem="oIQ-OA-wgg" firstAttribute="top" secondItem="Ng6-K3-0GX" secondAttribute="top" constant="12" id="KRt-4r-agi"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="oIQ-OA-wgg" secondAttribute="trailing" constant="19" id="LNw-AN-rBx"/>
+                                                <constraint firstItem="oIQ-OA-wgg" firstAttribute="top" secondItem="Ng6-K3-0GX" secondAttribute="topMargin" constant="12" id="OuS-JG-EtR"/>
                                                 <constraint firstItem="Yio-hb-RWj" firstAttribute="leading" secondItem="Ng6-K3-0GX" secondAttribute="leadingMargin" id="ScJ-2i-Aof"/>
                                                 <constraint firstItem="iPt-cU-Ejl" firstAttribute="top" secondItem="Yio-hb-RWj" secondAttribute="bottom" id="T7h-4h-cu9"/>
-                                                <constraint firstAttribute="bottom" secondItem="oIQ-OA-wgg" secondAttribute="bottom" constant="12.5" id="Tlr-8e-YXr"/>
                                                 <constraint firstItem="iPt-cU-Ejl" firstAttribute="leading" secondItem="Ng6-K3-0GX" secondAttribute="leadingMargin" id="TrV-EI-Dab"/>
                                                 <constraint firstItem="SDY-n2-cmb" firstAttribute="top" secondItem="Ng6-K3-0GX" secondAttribute="topMargin" id="cN4-7k-GkD"/>
                                                 <constraint firstItem="iPt-cU-Ejl" firstAttribute="top" secondItem="Yio-hb-RWj" secondAttribute="bottom" constant="8" id="fZs-97-uai"/>
-                                                <constraint firstItem="Yio-hb-RWj" firstAttribute="top" secondItem="SDY-n2-cmb" secondAttribute="bottom" constant="8" id="nyd-Me-hsO"/>
-                                                <constraint firstAttribute="trailing" secondItem="oIQ-OA-wgg" secondAttribute="trailing" constant="26" id="pCU-Vl-PPr"/>
+                                                <constraint firstItem="oIQ-OA-wgg" firstAttribute="centerY" secondItem="Ng6-K3-0GX" secondAttribute="centerY" id="h6t-Fr-LFj"/>
+                                                <constraint firstItem="Yio-hb-RWj" firstAttribute="top" secondItem="SDY-n2-cmb" secondAttribute="bottom" constant="7" id="nyd-Me-hsO"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -287,7 +290,7 @@
                                                         <constraint firstAttribute="height" constant="51" id="oMf-92-4Ra"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -529,7 +532,6 @@
         <image name="Search.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rTl-DB-lhn"/>
-        <segue reference="h3W-ZO-AGu"/>
+        <segue reference="VVz-mv-HWv"/>
     </inferredMetricsTieBreakers>
 </document>
