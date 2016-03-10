@@ -13,8 +13,7 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var readInstructionsLabel: UILabel!
-    
+
     var matches: Matches?
     
     var dataSource = [Matches](){
@@ -28,11 +27,9 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
         return "InfoViewController"
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool)
+    {
         super.viewWillAppear(animated)
-     
-        
-        
     }
 
     override func viewDidLoad()
@@ -132,8 +129,8 @@ extension InfoViewController
             if let webViewController = segue.destinationViewController as? WebViewController{
                     webViewController.matches = self.matches
             }
-            
         }
+
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
@@ -155,4 +152,22 @@ extension InfoViewController
         }
        
     }
+    
+    
+    @IBAction func addToFavorites(sender: UIButton)
+    {
+        let popUp = UIAlertController(title: "Add to Favories", message: "Would you like to add this recipe to your favorites?", preferredStyle: .Alert)
+        let confirmAction = UIAlertAction(title: "Yes", style: .Default) { (action) -> Void in
+            guard let recipeName = self.matches?.recipeName else { return }
+//            let recipe =
+        }
+        
+    }
 }
+
+    
+
+    
+
+
+

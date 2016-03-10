@@ -34,6 +34,8 @@
 		AFD001DA1C90E737002D6FA8 /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD001D41C90E737002D6FA8 /* Home.png */; };
 		AFD001DB1C90E737002D6FA8 /* Search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD001D51C90E737002D6FA8 /* Search@2x.png */; };
 		AFD001DC1C90E737002D6FA8 /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD001D61C90E737002D6FA8 /* Search.png */; };
+		AFD001E21C914DEE002D6FA8 /* Heart.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD001E11C914DEE002D6FA8 /* Heart.png */; };
+		AFD001E41C915371002D6FA8 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD001E31C915371002D6FA8 /* FavoriteViewController.swift */; };
 		AFFBBD0D1C88C17800958A3D /* SearchCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFBBD0C1C88C17800958A3D /* SearchCollectionFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		AFD001D41C90E737002D6FA8 /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
 		AFD001D51C90E737002D6FA8 /* Search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Search@2x.png"; sourceTree = "<group>"; };
 		AFD001D61C90E737002D6FA8 /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search.png; sourceTree = "<group>"; };
+		AFD001E11C914DEE002D6FA8 /* Heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Heart.png; sourceTree = "<group>"; };
+		AFD001E31C915371002D6FA8 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		AFFBBD0C1C88C17800958A3D /* SearchCollectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +123,7 @@
 		AF0A661D1C80C6270008E41B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AFD001E31C915371002D6FA8 /* FavoriteViewController.swift */,
 				AF0A66451C8511910008E41B /* WebViewController.swift */,
 				AF0A663F1C84DBB00008E41B /* InfoViewController.swift */,
 				AF0A660D1C80C4A20008E41B /* HomeViewController.swift */,
@@ -174,6 +179,7 @@
 		AFD001D01C90E727002D6FA8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AFD001E11C914DEE002D6FA8 /* Heart.png */,
 				AFD001D11C90E737002D6FA8 /* Edit@2x.png */,
 				AFD001D21C90E737002D6FA8 /* Edit.png */,
 				AFD001D31C90E737002D6FA8 /* Home@2x.png */,
@@ -242,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD001E21C914DEE002D6FA8 /* Heart.png in Resources */,
 				AFD001D91C90E737002D6FA8 /* Home@2x.png in Resources */,
 				AF0A66161C80C4A20008E41B /* LaunchScreen.storyboard in Resources */,
 				AFD001DA1C90E737002D6FA8 /* Home.png in Resources */,
@@ -275,6 +282,7 @@
 				AF0A662F1C80F8F10008E41B /* ModelAdditions.swift in Sources */,
 				AF0A664E1C86620A0008E41B /* GroceryTask.swift in Sources */,
 				AF0A663A1C8129BF0008E41B /* Matches.swift in Sources */,
+				AFD001E41C915371002D6FA8 /* FavoriteViewController.swift in Sources */,
 				AF0A66581C8668FB0008E41B /* GroceryMemory.swift in Sources */,
 				AF0A663C1C817C030008E41B /* RecipeCollectionViewCell.swift in Sources */,
 				AF0A66211C80C6470008E41B /* API.swift in Sources */,
