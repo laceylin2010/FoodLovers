@@ -83,8 +83,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 self.performSegueWithIdentifier("InfoViewController", sender: updateRecipeResult)
             }
         })
-
-        
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView)
@@ -103,16 +101,10 @@ extension HomeViewController
 {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        print("time 4")
         if segue.identifier == InfoViewController.id(){
-            print("time 5")
             if let infoViewController = segue.destinationViewController as? InfoViewController{
-                print("time 6")
-//                if let indexPath = self.collectionView.indexPathsForSelectedItems()?.first {
-//                    let matches = self.dataSource[indexPath.row]
                     infoViewController.matches = sender as! Matches
                 } else {
-                    print("hello")
             }
         }
     }

@@ -16,11 +16,6 @@ extension Matches
         API.shared.searchRecipes(searchTerm) { (success, json) -> () in
             var matches = [Matches]()
             let eachRecipe = json
-
-            
-//            guard let attributions = eachRecipe["attribution"] as? [String : AnyObject] else { return }
-            
-//            let foodURL = attributions["url"] as? String ?? API.shared.yEmptyString
             
             guard let allRecipes = eachRecipe["matches"] as? [[String: AnyObject]] else { return }
             
@@ -29,8 +24,7 @@ extension Matches
             let rating = recipe["rating"] as? Int ?? 0
             let id = recipe["id"] as? String ?? API.shared.yEmptyString
             let recipeName = recipe["recipeName"] as? String ?? API.shared.yEmptyString
-//            let ingredients = recipe["ingredients"] as? [String] ?? []
-//            let totalTime = recipe["totalTimeInSeconds"] as? Int ?? 0
+
             guard let imageurls = recipe["smallImageUrls"] as? [String] else { print("Not Recieving image..."); return }
             let recipeImage = imageurls.last ?? API.shared.yEmptyString
                 

@@ -14,14 +14,7 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
 
-    var matches: Matches!{
-        didSet{
-//            print(matches.id)
-//            print(matches.ingredients)
-//            self.tableView.reloadData()
-        }
-    }
-    
+    var matches: Matches!
 
     class func id() -> String
     {
@@ -40,7 +33,6 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     override func viewWillAppear(animated: Bool)
     {
         super.viewWillAppear(animated)
-//        updatingRecipeInfo()
     }
     
     
@@ -49,20 +41,6 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
         super.didReceiveMemoryWarning()
         
     }
-
-//    func updatingRecipeInfo()
-//    {
-////        print(matches.id)
-////        print(matches.totalTime)
-//        Matches.updateRecipe(matches) { (success, updateRecipeResult) -> () in
-//            if success{
-//                self.matches = updateRecipeResult
-////                self.tableView.reloadData()
-////                print(self.matches.id)
-////                print(self.matches.totalTime)
-//            }
-//        }
-//    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
