@@ -46,7 +46,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         let reuseCell = self.collectionView.dequeueReusableCellWithReuseIdentifier("searchCell", forIndexPath: indexPath) as! SearchViewCell
         let searchRecipe = self.dataSource[indexPath.row]
         reuseCell.matches = searchRecipe
-
+        reuseCell.nameLabel.layer.cornerRadius = 8
 
         return reuseCell
     }

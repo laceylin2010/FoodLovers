@@ -42,7 +42,7 @@
 		AF0A660B1C80C4A20008E41B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF0A660D1C80C4A20008E41B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AF0A66101C80C4A20008E41B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AF0A66121C80C4A20008E41B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF0A66121C80C4A20008E41B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Project1/Assets.xcassets; sourceTree = "<group>"; };
 		AF0A66151C80C4A20008E41B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF0A66171C80C4A20008E41B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF0A66201C80C6470008E41B /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -85,32 +85,33 @@
 			isa = PBXGroup;
 			children = (
 				AF0A660A1C80C4A20008E41B /* Project1 */,
-				AF0A66091C80C4A20008E41B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
 		AF0A66091C80C4A20008E41B /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				AF0A66121C80C4A20008E41B /* Assets.xcassets */,
 				AF0A66081C80C4A20008E41B /* FoodLover.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		AF0A660A1C80C4A20008E41B /* Project1 */ = {
 			isa = PBXGroup;
 			children = (
-				AFD001D01C90E727002D6FA8 /* Images */,
-				AF0A660B1C80C4A20008E41B /* AppDelegate.swift */,
+				AF0A66091C80C4A20008E41B /* Products */,
 				AF0A660F1C80C4A20008E41B /* Main.storyboard */,
-				AF0A66221C80C64A0008E41B /* API */,
-				AF0A662B1C80F1740008E41B /* Models */,
-				AF0A661E1C80C62E0008E41B /* VIew */,
-				AF0A661D1C80C6270008E41B /* Controller */,
-				AF0A66121C80C4A20008E41B /* Assets.xcassets */,
+				AF0A660B1C80C4A20008E41B /* AppDelegate.swift */,
 				AF0A66141C80C4A20008E41B /* LaunchScreen.storyboard */,
-				AF0A66171C80C4A20008E41B /* Info.plist */,
 				AF0A66361C8125390008E41B /* Identity */,
+				AF0A662B1C80F1740008E41B /* Models */,
+				AFD001D01C90E727002D6FA8 /* Images */,
+				AF0A661D1C80C6270008E41B /* Controller */,
+				AF0A66221C80C64A0008E41B /* API */,
+				AF0A66171C80C4A20008E41B /* Info.plist */,
+				AF0A661E1C80C62E0008E41B /* VIew */,
 			);
 			path = Project1;
 			sourceTree = "<group>";

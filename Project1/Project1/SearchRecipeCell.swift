@@ -23,6 +23,7 @@ class SearchViewCell: UICollectionViewCell, Identity
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+ 
     
     var matches: Matches?{
         didSet{
@@ -52,10 +53,7 @@ class SearchViewCell: UICollectionViewCell, Identity
         super.prepareForReuse()
         self.imageView.image = nil
     }
-    
-    
 
-    
 }
 
 
