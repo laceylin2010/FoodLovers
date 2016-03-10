@@ -14,7 +14,13 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
 
-    var matches: Matches!
+    var matches: Matches!{
+        didSet{
+//            print(matches.id)
+//            print(matches.ingredients)
+//            self.tableView.reloadData()
+        }
+    }
     
 
     class func id() -> String
@@ -34,7 +40,7 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     override func viewWillAppear(animated: Bool)
     {
         super.viewWillAppear(animated)
-        updatingRecipeInfo()
+//        updatingRecipeInfo()
     }
     
     
@@ -44,20 +50,19 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
         
     }
 
-    func updatingRecipeInfo()
-    {
-        print(matches.id)
-        print(matches.ingredients)
-        
-        Matches.updateRecipe(matches) { (success, updateRecipeResult) -> () in
-            if success{
-                self.matches = updateRecipeResult
-                print(self.matches.id)
-                print(self.matches.ingredients)
-                self.tableView.reloadData()
-            }
-        }
-    }
+//    func updatingRecipeInfo()
+//    {
+////        print(matches.id)
+////        print(matches.totalTime)
+//        Matches.updateRecipe(matches) { (success, updateRecipeResult) -> () in
+//            if success{
+//                self.matches = updateRecipeResult
+////                self.tableView.reloadData()
+////                print(self.matches.id)
+////                print(self.matches.totalTime)
+//            }
+//        }
+//    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
@@ -94,12 +99,17 @@ class InfoViewController: UIViewController, Identity, UITableViewDataSource, UIT
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         var cell = UITableViewCell()
-    
+        
         if indexPath.section ==  0 {
             if let cell = self.tableView.dequeueReusableCellWithIdentifier("infoCell", forIndexPath: indexPath) as? InfoTableViewCell{
-                    cell.matches = matches
-                    cell.ratingLabel.text = "Rating: \(matches.rating)"
-                    cell.timeLabel.text = "Total Time: About \(matches.totalTime) Minutes"
+                cell.matches = matches
+                cell.ratingLabel.text = "Rating: \(matches.rating)"
+                if let timeCell = matches.totalTime {
+                    cell.timeLabel.text = "Total Time: About \(timeCell)"
+                } else {
+                    cell.timeLabel.text = "No estimated time"
+                }
+                
             }
         } else if indexPath.section == 1 {
             cell = self.tableView.dequeueReusableCellWithIdentifier("ingredientsCell", forIndexPath: indexPath)

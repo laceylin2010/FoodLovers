@@ -59,7 +59,7 @@ extension Matches
             let url = source["sourceRecipeUrl"] as? String ?? API.shared.yEmptyString
             
             let ingredients = currentRecipe["ingredientLines"] as? [String] ?? []
-            let totalTime = currentRecipe["totalTime"] as? Int ?? 0
+            let totalTime = currentRecipe["totalTime"] as? String ?? API.shared.yEmptyString
             
             recipe.ingredients = ingredients
             recipe.totalTime = totalTime
