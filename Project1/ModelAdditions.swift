@@ -13,7 +13,7 @@ extension Matches
     
     class func updateRecipes(searchTerm: String?, completion: (success: Bool, recipeMatches: [Matches]) -> ())
     {
-        API.shared.getRecipes(searchTerm) { (success, json) -> () in
+        API.shared.searchRecipes(searchTerm) { (success, json) -> () in
             var matches = [Matches]()
             let eachRecipe = json
 

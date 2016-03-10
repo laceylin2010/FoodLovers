@@ -33,7 +33,7 @@ class WebViewController: UIViewController, Identity
     
     func loadWebView()
     {
-        let frame = CGRect(x: 0.0, y: 50.0, width: self.view.frame.width, height: self.view.frame.height)
+        let frame = CGRect(x: 0.0, y: 75.0, width: self.view.frame.width, height: self.view.frame.height)
         let webView = WKWebView(frame: frame)
         if let recipeId = matches?.id{
             let url = NSURL(string: "http://www.yummly.com/recipe/\(recipeId)")
@@ -43,4 +43,6 @@ class WebViewController: UIViewController, Identity
             webView.loadRequest(request)
         }
     }
+    
+
 }

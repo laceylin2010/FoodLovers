@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--FoodLovers-->
+        <!--Featured Recipes-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="HomeViewController" customModule="FoodLover" customModuleProvider="target" sceneMemberID="viewController">
@@ -67,7 +67,7 @@
                             <constraint firstItem="u6T-24-p9a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kZC-cU-4sX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="FoodLovers" id="1VP-UR-auw"/>
+                    <navigationItem key="navigationItem" title="Featured Recipes" id="1VP-UR-auw"/>
                     <connections>
                         <outlet property="collectionView" destination="u6T-24-p9a" id="HYd-RU-k8A"/>
                         <segue destination="1yZ-oH-hWu" kind="show" identifier="InfoViewController" id="rTl-DB-lhn"/>
@@ -459,6 +459,6 @@
         <image name="Search.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VVz-mv-HWv"/>
+        <segue reference="rTl-DB-lhn"/>
     </inferredMetricsTieBreakers>
 </document>
