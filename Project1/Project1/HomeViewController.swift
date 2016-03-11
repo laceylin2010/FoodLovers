@@ -40,7 +40,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewWillAppear(animated: Bool)
     {
         super.viewWillAppear(animated)
+        activityIndicator()
         self.overlayView.alpha = 0.0
+        
         
     }
     
@@ -104,6 +106,18 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             parallaxCell.offset(CGPointMake(0.0, yOffset))
         }
     }
+    
+    func activityIndicator()
+    {
+
+        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
+        
+        
+        self.overlayView.center = activityIndicator.center
+    }
+
     
 }
 
