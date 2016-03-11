@@ -442,11 +442,11 @@
             </objects>
             <point key="canvasLocation" x="371" y="-355"/>
         </scene>
-        <!--Search Recipes-->
+        <!--Search-->
         <scene sceneID="DoH-jA-nbD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yFR-HY-f0B" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search Recipes" image="Search.png" selectedImage="Search.png" id="9ys-9V-1M1"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="Search.png" selectedImage="Search.png" id="9ys-9V-1M1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lo9-zS-efb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -495,11 +495,11 @@
             </objects>
             <point key="canvasLocation" x="1183" y="1142"/>
         </scene>
-        <!--Grocery List-->
+        <!--Groceries-->
         <scene sceneID="XrJ-bu-Jxg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A5y-en-xgj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Grocery List" image="Edit.png" selectedImage="Edit.png" id="l1r-H7-W3v"/>
+                    <tabBarItem key="tabBarItem" title="Groceries" image="Edit.png" selectedImage="Edit.png" id="l1r-H7-W3v"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OcK-Qm-zKs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -514,12 +514,12 @@
             </objects>
             <point key="canvasLocation" x="1995" y="1120"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favorites-->
         <scene sceneID="XAB-KX-FwU">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pbi-kJ-l38" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yQa-a3-Ync" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="FiR-WU-zYR"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="Favorite.png" selectedImage="Favorite.png" id="FiR-WU-zYR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ioc-HC-IT7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -536,6 +536,7 @@
     </scenes>
     <resources>
         <image name="Edit.png" width="30" height="30"/>
+        <image name="Favorite.png" width="30" height="30"/>
         <image name="Heart.png" width="50" height="50"/>
         <image name="Home.png" width="30" height="30"/>
         <image name="Search.png" width="30" height="30"/>
