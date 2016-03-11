@@ -58,18 +58,27 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Bh1-up-5Id"/>
                                 </connections>
                             </collectionView>
+                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwf-ZB-A4h">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="u6T-24-p9a" secondAttribute="trailing" id="3sq-g8-BMx"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="u6T-24-p9a" secondAttribute="bottom" id="MBe-uM-zRX"/>
                             <constraint firstItem="u6T-24-p9a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ohy-Fu-ZAL"/>
+                            <constraint firstAttribute="bottom" secondItem="mwf-ZB-A4h" secondAttribute="bottom" id="X2C-SH-wFU"/>
+                            <constraint firstItem="mwf-ZB-A4h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bUa-CV-BBC"/>
+                            <constraint firstItem="mwf-ZB-A4h" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="h8z-Os-PXk"/>
                             <constraint firstItem="u6T-24-p9a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kZC-cU-4sX"/>
+                            <constraint firstAttribute="trailing" secondItem="mwf-ZB-A4h" secondAttribute="trailing" id="nGm-qG-6yB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Featured Recipes" id="1VP-UR-auw"/>
                     <connections>
                         <outlet property="collectionView" destination="u6T-24-p9a" id="HYd-RU-k8A"/>
+                        <outlet property="overlayView" destination="mwf-ZB-A4h" id="9Iw-m2-y4N"/>
                         <segue destination="1yZ-oH-hWu" kind="show" identifier="InfoViewController" id="rTl-DB-lhn"/>
                     </connections>
                 </viewController>
@@ -532,6 +541,6 @@
         <image name="Search.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VVz-mv-HWv"/>
+        <segue reference="rTl-DB-lhn"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,7 +11,9 @@ import UIKit
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, Identity
 {
 
+    @IBOutlet weak var overlayView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+
     
     var matches: Matches?
 
@@ -35,6 +37,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
     }
 
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        self.overlayView.alpha = 0.0
+        
+    }
     
     override func didReceiveMemoryWarning()
     {
@@ -76,6 +84,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
+        self.overlayView.alpha = 0.3
+        
         let matches = self.dataSource[indexPath.row]
         
         Matches.updateRecipe(matches, completion: { (success, updateRecipeResult) -> () in
