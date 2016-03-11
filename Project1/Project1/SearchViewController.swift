@@ -47,6 +47,7 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
         let searchRecipe = self.dataSource[indexPath.row]
         reuseCell.matches = searchRecipe
         reuseCell.nameLabel.layer.cornerRadius = 8
+        reuseCell.imageView.layer.cornerRadius = 15
      
 
         return reuseCell

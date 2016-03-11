@@ -148,15 +148,7 @@ extension InfoViewController
        
     }
     
-    
-    @IBAction func addToFavorites(sender: UIButton)
-    {
-//        let popUp = UIAlertController(title: "Add to Favories", message: "Would you like to add this recipe to your favorites?", preferredStyle: .Alert)
-//        let confirmAction = UIAlertAction(title: "Yes", style: .Default) { (action) -> Void in
-        
-        }
-        
-    }
+
 }
 
     

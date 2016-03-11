@@ -29,10 +29,10 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecipeCollectionViewCell" id="Pl2-Qg-sbC" customClass="RecipeCollectionViewCell" customModule="FoodLover" customModuleProvider="target">
-                                        <rect key="frame" x="94" y="0.0" width="413" height="223"/>
+                                        <rect key="frame" x="94" y="0.0" width="412.5" height="223"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="413" height="223"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="412.5" height="223"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Kz-5N-7wu">
@@ -120,7 +120,7 @@
                                 </imageView>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" rowHeight="75" id="xoY-mI-ATY" customClass="InfoTableViewCell" customModule="FoodLover" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="326" width="600" height="75"/>
+                                        <rect key="frame" x="0.0" y="325.5" width="600" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xoY-mI-ATY" id="Ng6-K3-0GX">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
@@ -144,29 +144,15 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIQ-OA-wgg">
-                                                    <rect key="frame" x="542" y="20" width="31" height="33"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="31" id="g9w-jd-yPz"/>
-                                                    </constraints>
-                                                    <state key="normal" image="Heart.png"/>
-                                                    <connections>
-                                                        <action selector="addToFavorites:" destination="1yZ-oH-hWu" eventType="touchUpInside" id="v8h-j0-vB2"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="oIQ-OA-wgg" firstAttribute="centerY" secondItem="Yio-hb-RWj" secondAttribute="centerY" id="5uf-58-VYc"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="iPt-cU-Ejl" secondAttribute="bottom" id="9cJ-8K-YVm"/>
                                                 <constraint firstItem="SDY-n2-cmb" firstAttribute="leading" secondItem="Ng6-K3-0GX" secondAttribute="leadingMargin" id="KP9-bq-8ze"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="oIQ-OA-wgg" secondAttribute="trailing" constant="19" id="LNw-AN-rBx"/>
-                                                <constraint firstItem="oIQ-OA-wgg" firstAttribute="top" secondItem="Ng6-K3-0GX" secondAttribute="topMargin" constant="12" id="OuS-JG-EtR"/>
                                                 <constraint firstItem="Yio-hb-RWj" firstAttribute="leading" secondItem="Ng6-K3-0GX" secondAttribute="leadingMargin" id="ScJ-2i-Aof"/>
                                                 <constraint firstItem="iPt-cU-Ejl" firstAttribute="top" secondItem="Yio-hb-RWj" secondAttribute="bottom" id="T7h-4h-cu9"/>
                                                 <constraint firstItem="iPt-cU-Ejl" firstAttribute="leading" secondItem="Ng6-K3-0GX" secondAttribute="leadingMargin" id="TrV-EI-Dab"/>
                                                 <constraint firstItem="SDY-n2-cmb" firstAttribute="top" secondItem="Ng6-K3-0GX" secondAttribute="topMargin" id="cN4-7k-GkD"/>
                                                 <constraint firstItem="iPt-cU-Ejl" firstAttribute="top" secondItem="Yio-hb-RWj" secondAttribute="bottom" constant="8" id="fZs-97-uai"/>
-                                                <constraint firstItem="oIQ-OA-wgg" firstAttribute="centerY" secondItem="Ng6-K3-0GX" secondAttribute="centerY" id="h6t-Fr-LFj"/>
                                                 <constraint firstItem="Yio-hb-RWj" firstAttribute="top" secondItem="SDY-n2-cmb" secondAttribute="bottom" constant="7" id="nyd-Me-hsO"/>
                                             </constraints>
                                             <variation key="default">
@@ -213,9 +199,7 @@
                             <constraint firstItem="clx-we-ywF" firstAttribute="top" secondItem="CEy-5g-dv6" secondAttribute="bottom" id="tHv-GP-Hb1"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="NFQ-an-cp5"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="hO7-d2-KsJ"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -448,7 +432,6 @@
                         <segue destination="o5L-KR-Q2H" kind="relationship" relationship="viewControllers" id="Gnz-hF-TBU"/>
                         <segue destination="yFR-HY-f0B" kind="relationship" relationship="viewControllers" id="OFk-Jd-BJE"/>
                         <segue destination="A5y-en-xgj" kind="relationship" relationship="viewControllers" id="zBw-Hl-vcb"/>
-                        <segue destination="yQa-a3-Ync" kind="relationship" relationship="viewControllers" id="dlj-to-r52"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PlM-is-BNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -474,57 +457,6 @@
             </objects>
             <point key="canvasLocation" x="371" y="427"/>
         </scene>
-        <!--Favorite Recipes-->
-        <scene sceneID="Lei-Va-tCP">
-            <objects>
-                <viewController id="Zx1-1p-nRg" customClass="FavoriteViewController" customModule="FoodLover" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="122" sectionHeaderHeight="28" sectionFooterHeight="28" id="52j-MH-gbl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" rowHeight="122" id="X1b-oi-X9W">
-                                <rect key="frame" x="0.0" y="92" width="600" height="122"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X1b-oi-X9W" id="rXY-Ca-9KX">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="122"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FLs-eS-tRI">
-                                            <rect key="frame" x="8" y="0.0" width="157" height="119"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="157" id="nWj-P9-xpS"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frB-gg-npv">
-                                            <rect key="frame" x="183" y="50" width="392" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="392" id="zc6-Yg-8m8"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="frB-gg-npv" firstAttribute="top" secondItem="rXY-Ca-9KX" secondAttribute="top" constant="50" id="1kn-Rt-oaX"/>
-                                        <constraint firstAttribute="bottom" secondItem="FLs-eS-tRI" secondAttribute="bottom" constant="2.5" id="Frn-Hr-RSf"/>
-                                        <constraint firstItem="frB-gg-npv" firstAttribute="leading" secondItem="FLs-eS-tRI" secondAttribute="trailing" constant="18" id="Gus-fp-Mxb"/>
-                                        <constraint firstItem="FLs-eS-tRI" firstAttribute="top" secondItem="rXY-Ca-9KX" secondAttribute="top" id="bKY-lY-Nh6"/>
-                                        <constraint firstItem="FLs-eS-tRI" firstAttribute="leading" secondItem="rXY-Ca-9KX" secondAttribute="leading" constant="8" id="rz1-wF-Nfa"/>
-                                        <constraint firstAttribute="trailing" secondItem="frB-gg-npv" secondAttribute="trailing" constant="25" id="wMJ-sz-Dyh"/>
-                                        <constraint firstAttribute="bottom" secondItem="frB-gg-npv" secondAttribute="bottom" constant="51" id="zbN-hL-eeM"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Favorite Recipes" id="qzS-mW-ked"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M0j-Up-VYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1183" y="1142"/>
-        </scene>
         <!--Groceries-->
         <scene sceneID="XrJ-bu-Jxg">
             <objects>
@@ -544,34 +476,13 @@
             </objects>
             <point key="canvasLocation" x="1995" y="1120"/>
         </scene>
-        <!--Favorites-->
-        <scene sceneID="XAB-KX-FwU">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pbi-kJ-l38" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yQa-a3-Ync" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" image="Favorite.png" selectedImage="Favorite.png" id="FiR-WU-zYR"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ioc-HC-IT7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Zx1-1p-nRg" kind="relationship" relationship="rootViewController" id="h3W-ZO-AGu"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="371" y="1142"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Edit.png" width="30" height="30"/>
-        <image name="Favorite.png" width="30" height="30"/>
-        <image name="Heart.png" width="50" height="50"/>
         <image name="Home.png" width="30" height="30"/>
         <image name="Search.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rTl-DB-lhn"/>
+        <segue reference="VVz-mv-HWv"/>
     </inferredMetricsTieBreakers>
 </document>
